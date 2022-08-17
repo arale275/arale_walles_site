@@ -1,0 +1,363 @@
+/* reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+/* my costum properties */
+
+:root {
+    --blue_color: rgb(35, 154, 205);
+    --withe_color: rgb(255, 255, 255);
+    --grey_color: rgb(240, 240, 240);
+    --black_color: rgb(0, 0, 0);
+    --brown_color: rgb(205, 133, 63);
+
+
+    --my_font1: 'Suez One', serif;
+    --my_font2: 'Secular One', sans-serif;
+}
+
+
+
+/* general */
+
+html {
+    direction: rtl;
+}
+
+body {
+    font-family: var(--my_font2);
+}
+
+.container {
+    max-width: 600px;
+    width: 85%;
+    padding: 1.5em 3em;
+    margin: 0 auto;
+}
+
+.tytle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.sub_tytle {
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 1em;
+}
+
+.p_style {
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding: 1em 0;
+}
+
+button {
+    border: var(--black_color) 0.2em solid;
+    border-radius: 2em;
+    padding: 0.75em 1.5em;
+    display: block;
+    margin: 1em auto;
+    font-size: 1.125rem;
+}
+
+header,
+.main_bg,
+.build_sites_bg,
+.diy_bg,
+.tips_bg,
+footer {
+    min-width: 20em;
+}
+
+
+/* header settings */
+
+.logo_link {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    min-height: 5em;
+    margin-top: 1em;
+}
+
+ul {
+    min-height: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding: 0 1em;
+    color: var(--brown_color);
+}
+
+nav a:hover {
+    color: var(--black_color);
+}
+
+
+/* main settings */
+
+/* section 1 */
+
+.main_bg {
+    background: var(--grey_color);
+}
+
+.main_tytle {
+    color: var(--blue_color);
+    padding: 1em;
+    font-size: 0.75rem;
+}
+
+.main_img {
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 5px 5px rgba(122, 122, 122, 0.45);
+    margin: 1em auto;
+}
+
+
+/* section 2 */
+
+.build_sites_bg {
+    background: var(--brown_color);
+}
+
+.build_sites_tytle {
+    color: var(--withe_color);
+}
+
+.build_sites_button {
+    background: var(--withe_color);
+    color: var(--brown_color);
+}
+
+.build_sites_button:hover {
+    color: var(--black_color);
+    cursor: pointer;
+}
+
+
+/* section 3 */
+.diy_bg {
+    background: var(--withe_color);
+}
+
+.diy_tytle {
+    color: var(--blue_color);
+}
+
+.diy_button {
+    background: var(--blue_color);
+    color: var(--withe_color);
+}
+
+.diy_button:hover {
+    color: var(--black_color);
+    cursor: pointer;
+}
+
+/* section 4 */
+
+.tips_bg {
+    background: var(--blue_color);
+}
+
+.tips_button {
+    background: var(--withe_color);
+    color: var(--blue_color);
+}
+
+.tips_button:hover {
+    color: var(--black_color);
+    cursor: pointer;
+}
+
+
+/* footer settings */
+
+footer {
+    margin: 0;
+}
+
+footer ul {
+    min-height: auto;
+}
+
+footer a {
+    color: var(--brown_color);
+    padding: 0 1em;
+}
+
+footer p {
+    padding: 1em;
+    text-align: center;
+}
+
+
+/* media queries */
+
+@media (min-width:400px) {
+    
+    .container {
+        max-width: 600px;
+    }
+
+    .sub_tytle,
+    .p_style, 
+    button {
+        font-size: 1.25rem;
+    }
+
+    nav a{
+        font-size: 1.4rem;
+    }
+
+    .tytle {
+        font-size: 2rem;
+    }
+
+    .main_tytle {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (min-width: 720px) {
+    
+
+    .container {
+        max-width: 1000px;
+    }
+
+    .sub_tytle,
+    .p_style, 
+    button {
+        font-size: 1.6rem;
+    }
+
+    nav a{
+        font-size: 2rem;
+    }
+
+    .tytle {
+        font-size: 2.5rem;
+    }
+
+    footer a,
+    footer p {
+        font-size: 1.35rem;
+    }
+
+    .flex_container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .main_tytle {
+        width: 55%;
+    }
+
+    .main_img {
+        width: 35%;
+        max-width: 350px;
+        margin: 1em;
+    }
+
+    .main_p_style {
+        width: 100%;
+    }
+}
+
