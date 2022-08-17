@@ -154,17 +154,21 @@ body {
 h1 {
     font-size: 1.5rem;
     font-weight: 900;
+    padding: 2em;
 }
 
 h2 {
     font-size: 1.25rem;
     font-weight: 700;
+    padding: 1em;
 }
 
 .container {
     max-width: 650px;
     padding: 1em;
     margin: 0 auto;
+    text-align: center;
+    border: red solid 1px;
 }
 
 .tytle {
@@ -225,6 +229,24 @@ nav a:hover {
     color: var(--black_color);
 }
 
+
+/* main swttings */
+
+.flex_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    min-height: 11em;
+}
+
+.card {
+    width: 32%;
+    border: 1px solid rgba(128, 128, 128, 0.39);
+    box-shadow: 5px 5px black;
+    min-width: 8em;
+    margin: 1em auto;
+}
 
 
 

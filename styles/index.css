@@ -4,36 +4,42 @@
     font-style: normal;
     font-weight: 300;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-Regular.woff2);
     font-style: normal;
     font-weight: 400;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-Medium.woff2);
     font-style: normal;
     font-weight: 500;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-SemiBold.woff2);
     font-style: normal;
     font-weight: 600;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-Bold.woff2);
     font-style: normal;
     font-weight: 700;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-ExtraBold.woff2);
     font-style: normal;
     font-weight: 800;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-Black.woff2);
@@ -325,10 +331,10 @@ footer p {
 /* media queries */
 
 @media (min-width:650px) {
-    
+
     .container {
         max-width: 68.75em;
-        text-align: center; 
+        text-align: center;
     }
 
     h1 {
@@ -350,11 +356,11 @@ footer p {
     }
 
     .main_bg {
-            min-height: 50em;
-            display: flex;
-            align-items: center;        
-        }
-    
+        min-height: 50em;
+        display: flex;
+        align-items: center;
+    }
+
     .build_sites_bg,
     .diy_bg,
     .tips_bg {
