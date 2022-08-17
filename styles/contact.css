@@ -79,15 +79,6 @@ select {
 }
 
 
-    /* secular-one-regular - hebrew */
-    @font-face {
-        font-family: 'Secular One';
-        font-style: normal;
-        font-weight: 400;
-        src: url('secular-one-v11-hebrew-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-             url('secular-one-v11-hebrew-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-      }
-
 
 
 
@@ -100,8 +91,8 @@ select {
     --black_color: rgb(0, 0, 0);
     --brown_color: rgb(205, 133, 63);
 
-    --my_font1: 'Suez One', serif;
-    --my_font2: 'Secular One', sans-serif;
+
+    --my_font2: 'Heebo', sans-serif;
 }
 
 
@@ -114,21 +105,51 @@ html {
 
 body {
     font-family: var(--my_font2);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .container {
-    max-width: 600px;
-    width: 85%;
-    padding: 1.5em 3em;
+    max-width: 650px;
+    padding: 1em;
     margin: 0 auto;
+}
+
+.tytle {
+    padding: 0.5em;
+    text-align: center;
+}
+
+.sub_tytle {
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: 800;
+}
+
+.p_style {
+    padding: 1em 0;
+}
+
+button {
+    border: var(--black_color) 0.2em solid;
+    border-radius: 2em;
+    padding: 0.75em 1.5em;
+    display: block;
+    margin: 1em auto;
+    font-weight: 800;
 }
 
 
 /* header settings */
-
-header {
-    min-width: 20em;
-}
 
 .logo_link {
     display: flex;
@@ -151,10 +172,10 @@ ul {
 
 nav a {
     text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: 800;
+    font-size: 1.125rem;
     padding: 0 1em;
     color: var(--brown_color);
+    font-weight: 800;
 }
 
 nav a:hover {
@@ -170,9 +191,6 @@ footer {
     margin: 0;
 }
 
-footer ul {
-    min-height: auto;
-}
 
 footer a {
     color: var(--brown_color);
@@ -186,35 +204,52 @@ footer p {
 
 
 
+
 /* media queries */
 
-@media (min-width:400px) {
+@media (min-width:650px) {
     
     .container {
-        max-width: 600px;
+        max-width: 68.75em;
+        text-align: center; 
     }
 
-    nav a{
-        font-size: 1.4rem;
-    }
-
-}
-
-@media (min-width: 720px) {
-    
-
-    .container {
-        max-width: 1000px;
-    }
-
-    nav a{
+    h1 {
         font-size: 2rem;
     }
 
+    h2,
+    nav a {
+        font-size: 1.75rem
+    }
 
+    .sub_tytle,
+    .p_style,
+    button,
     footer a,
     footer p {
         font-size: 1.35rem;
     }
+
+    .main_bg {
+            min-height: 50em;
+            display: flex;
+            align-items: center;        
+        }
     
+    .build_sites_bg,
+    .diy_bg,
+    .tips_bg {
+        min-height: 30em;
+        display: flex;
+        align-items: center;
+    }
+
+    header,
+    footer {
+        min-height: 20em;
+        display: flex;
+        align-items: center;
+    }
+
 }
