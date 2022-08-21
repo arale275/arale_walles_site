@@ -137,7 +137,7 @@ select {
     --blue_color: rgb(0, 159, 253); 
     --withe_color: rgb(255, 255, 255);
     --grey_color: rgb(240, 240, 240);
-    --black_color: rgb(0, 0, 0);
+    --black_color: rgba(0, 0, 0, 0.747);
     --brown_color: rgb(255, 164, 0);
 
 
@@ -162,12 +162,6 @@ h1 {
     font-weight: 900;
 }
 
-.container {
-    max-width: 650px;
-    padding: 1em;
-    margin: 0 auto;
-}
-
 .tytle {
     font-size: 1.25rem;
     font-weight: 900;
@@ -182,7 +176,7 @@ h1 {
 }
 
 .p_style {
-    padding: 1em 0;
+    padding: 1em;
     max-width: 60ch;
 }
 
@@ -210,7 +204,6 @@ header {
 
 nav {
     min-height: 5em;
-    margin-top: 1em;
 }
 
 ul {
@@ -219,14 +212,14 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    padding: 1em;
 }
 
 nav a {
     text-decoration: none;
     font-size: 1.125rem;
     padding: 0 1em;
-    color: var(--black_color);
+    color: black;
     font-weight: 800;
 }
 
@@ -241,19 +234,23 @@ nav a:hover {
 
 .main_bg {
     background: var(--withe_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
 }
 
 .main_tytle {
     padding: 1em;
     max-width: 60ch;
-    margin: 0 auto;
 }
 
 .main_img {
-    display: flex;
-    justify-content: center;
     box-shadow: 5px 5px 5px 5px rgba(122, 122, 122, 0.45);
-    margin: 1em auto;
+    padding: 1em;
+    border-radius: 1em;
 }
 
 
@@ -262,12 +259,18 @@ nav a:hover {
 .build_sites_bg {
     background: var(--black_color);
     color: var(--withe_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
 }
 
 
 .build_sites_button {
     background: var(--brown_color);
-    color: var(--black_color);
+    color: black;
 }
 
 .build_sites_button:hover {
@@ -279,15 +282,21 @@ nav a:hover {
 /* section 3 */
 .diy_bg {
     background: var(--brown_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
 }
 
 .diy_button {
-    background: var(--black_color);
+    background: black;
     color: var(--withe_color);
 }
 
 .diy_button:hover {
-    color: var(--blue_color);
+    color: var(--brown_color);
     cursor: pointer;
 }
 
@@ -296,11 +305,17 @@ nav a:hover {
 .tips_bg {
     background: var(--black_color);
     color: var(--withe_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
 }
 
 .tips_button {
     background: var(--brown_color);
-    color: var(--black_color);
+    color: black;
 }
 
 .tips_button:hover {
@@ -313,16 +328,19 @@ nav a:hover {
 
 footer {
     margin: 0;
+    padding: 2.5em 1.5em 1.5em 1.5em;
+    background: var(--blue_color);
 }
 
-
 footer a {
-    color: var(--black_color);
+    color: black;
     padding: 0 1em;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 footer a:hover {
-    color: var(--blue_color);
+    color: var(--withe_color);
 }
 
 footer p {
@@ -335,11 +353,6 @@ footer p {
 
 @media (min-width:650px) {
 
-    .container {
-        max-width: 68.75em;
-        text-align: center;
-    }
-
     h1 {
         font-size: 2.5rem;
     }
@@ -347,7 +360,6 @@ footer p {
     .tytle {
         font-size: 2.25rem
     }
-
 
     nav a {
         font-size: 1.85rem
@@ -364,23 +376,13 @@ footer p {
 
     .main_bg {
         min-height: 50em;
-        display: flex;
-        align-items: center;
     }
 
     .build_sites_bg,
     .diy_bg,
     .tips_bg {
         min-height: 30em;
-        display: flex;
-        align-items: center;
     }
 
-    header,
-    footer {
-        min-height: 20em;
-        display: flex;
-        align-items: center;
-    }
 
 }
