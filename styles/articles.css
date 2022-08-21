@@ -4,36 +4,42 @@
     font-style: normal;
     font-weight: 300;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-Regular.woff2);
     font-style: normal;
     font-weight: 400;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-Medium.woff2);
     font-style: normal;
     font-weight: 500;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-SemiBold.woff2);
     font-style: normal;
     font-weight: 600;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-Bold.woff2);
     font-style: normal;
     font-weight: 700;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-ExtraBold.woff2);
     font-style: normal;
     font-weight: 800;
 }
+
 @font-face {
     font-family: "heebo";
     src: url(/fonts/Heebo-Black.woff2);
@@ -154,7 +160,14 @@ body {
 h1 {
     font-size: 1.5rem;
     font-weight: 900;
-    padding: 2em;
+    padding: 1em;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, -17px 32px 26px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+    color: var(--blue_color);
+    background: var(--withe_color);
+    max-width: 35ch;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
@@ -163,27 +176,22 @@ h2 {
     padding: 1em;
 }
 
-.container {
-    max-width: 650px;
-    padding: 1em;
-    margin: 0 auto;
-    text-align: center;
-    border: red solid 1px;
-}
 
 .tytle {
     padding: 0.5em;
     text-align: center;
+    margin-top: 1.5em;
 }
 
 .sub_tytle {
     text-align: center;
-    margin-bottom: 1em;
-    font-weight: 800;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .p_style {
-    padding: 1em 0;
+    max-width: 60ch;
+    text-align: start;
 }
 
 button {
@@ -193,6 +201,8 @@ button {
     display: block;
     margin: 1em auto;
     font-weight: 800;
+    background: var(--blue_color);
+    color: var(--withe_color);
 }
 
 
@@ -215,6 +225,7 @@ ul {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding-bottom: 1.5em;
 }
 
 nav a {
@@ -232,28 +243,60 @@ nav a:hover {
 
 /* main swttings */
 
-.flex_cards {
+
+.bg_grey {
+    background: var(--grey_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
+}
+
+.bg_withe {
+    background: var(--withe_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
+}
+
+.bg_brown {
+    background: var(--brown_color);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 1.5em 1em 2em 1em;
+    min-height: 20em;
+    gap: 1em;
     text-align: center;
-    min-height: 11em;
 }
+
+
 
 .card {
-    width: 32%;
+    width: 30%;
     border: 1px solid rgba(128, 128, 128, 0.39);
-    box-shadow: 5px 5px black;
-    min-width: 8em;
-    margin: 1em auto;
+    box-shadow: -17px 32px 49px 3px rgba(0, 0, 0, 0.35);
+    min-width: 10em;
+    background: var(--withe_color);
+    color: var(--blue_color);
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 35ch;
 }
-
 
 
 /* footer settings */
 
 footer {
     margin: 0;
+    padding: 2.5em 1.5em 1.5em 1.5em;
 }
 
 
@@ -273,12 +316,8 @@ footer p {
 /* media queries */
 
 @media (min-width:650px) {
-    
-    .container {
-        max-width: 68.75em;
-        text-align: center; 
-    }
 
+   
     h1 {
         font-size: 2rem;
     }
@@ -297,11 +336,11 @@ footer p {
     }
 
     .main_bg {
-            min-height: 50em;
-            display: flex;
-            align-items: center;        
-        }
-    
+        min-height: 50em;
+        display: flex;
+        align-items: center;
+    }
+
     .build_sites_bg,
     .diy_bg,
     .tips_bg {
@@ -314,6 +353,8 @@ footer p {
     footer {
         min-height: 20em;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 

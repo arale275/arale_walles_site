@@ -186,6 +186,7 @@ h2 {
 
 .p_style {
     padding: 1em 0;
+    max-width: 60ch;
 }
 
 button {
@@ -243,6 +244,8 @@ nav a:hover {
 .main_tytle {
     color: var(--blue_color);
     padding: 1em;
+    max-width: 60ch;
+    margin: 0 auto;
 }
 
 .main_img {
