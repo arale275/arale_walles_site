@@ -128,11 +128,11 @@ select {
 /* my costum properties */
 
 :root {
-    --blue_color: rgb(35, 154, 205);
+    --blue_color: rgb(0, 159, 253); 
     --withe_color: rgb(255, 255, 255);
     --grey_color: rgb(240, 240, 240);
     --black_color: rgb(0, 0, 0);
-    --brown_color: rgb(205, 133, 63);
+    --brown_color: rgb(255, 164, 0);
 
 
     --my_font2: 'Heebo', sans-serif;

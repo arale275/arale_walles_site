@@ -134,11 +134,11 @@ select {
 /* my costum properties */
 
 :root {
-    --blue_color: rgb(35, 154, 205);
+    --blue_color: rgb(0, 159, 253); 
     --withe_color: rgb(255, 255, 255);
     --grey_color: rgb(240, 240, 240);
     --black_color: rgb(0, 0, 0);
-    --brown_color: rgb(205, 133, 63);
+    --brown_color: rgb(255, 164, 0);
 
 
     --my_font2: 'Heebo', sans-serif;
@@ -162,11 +162,6 @@ h1 {
     font-weight: 900;
 }
 
-h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
 .container {
     max-width: 650px;
     padding: 1em;
@@ -174,6 +169,8 @@ h2 {
 }
 
 .tytle {
+    font-size: 1.25rem;
+    font-weight: 900;
     padding: 0.5em;
     text-align: center;
 }
@@ -181,7 +178,7 @@ h2 {
 .sub_tytle {
     text-align: center;
     margin-bottom: 1em;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .p_style {
@@ -190,7 +187,7 @@ h2 {
 }
 
 button {
-    border: var(--black_color) 0.2em solid;
+    border: none;
     border-radius: 2em;
     padding: 0.75em 1.5em;
     display: block;
@@ -201,9 +198,14 @@ button {
 
 /* header settings */
 
+header {
+    background: var(--blue_color);
+}
+
 .logo_link {
     display: flex;
     justify-content: center;
+    background: var(--withe_color);
 }
 
 nav {
@@ -224,12 +226,12 @@ nav a {
     text-decoration: none;
     font-size: 1.125rem;
     padding: 0 1em;
-    color: var(--brown_color);
+    color: var(--black_color);
     font-weight: 800;
 }
 
 nav a:hover {
-    color: var(--black_color);
+    color: var(--withe_color);
 }
 
 
@@ -238,11 +240,10 @@ nav a:hover {
 /* section 1 */
 
 .main_bg {
-    background: var(--grey_color);
+    background: var(--withe_color);
 }
 
 .main_tytle {
-    color: var(--blue_color);
     padding: 1em;
     max-width: 60ch;
     margin: 0 auto;
@@ -259,56 +260,51 @@ nav a:hover {
 /* section 2 */
 
 .build_sites_bg {
-    background: var(--brown_color);
-}
-
-.build_sites_tytle {
+    background: var(--black_color);
     color: var(--withe_color);
 }
 
+
 .build_sites_button {
-    background: var(--withe_color);
-    color: var(--brown_color);
+    background: var(--brown_color);
+    color: var(--black_color);
 }
 
 .build_sites_button:hover {
-    color: var(--black_color);
+    color: var(--withe_color);
     cursor: pointer;
 }
 
 
 /* section 3 */
 .diy_bg {
-    background: var(--withe_color);
-}
-
-.diy_tytle {
-    color: var(--blue_color);
+    background: var(--brown_color);
 }
 
 .diy_button {
-    background: var(--blue_color);
+    background: var(--black_color);
     color: var(--withe_color);
 }
 
 .diy_button:hover {
-    color: var(--black_color);
+    color: var(--blue_color);
     cursor: pointer;
 }
 
 /* section 4 */
 
 .tips_bg {
-    background: var(--blue_color);
+    background: var(--black_color);
+    color: var(--withe_color);
 }
 
 .tips_button {
-    background: var(--withe_color);
-    color: var(--blue_color);
+    background: var(--brown_color);
+    color: var(--black_color);
 }
 
 .tips_button:hover {
-    color: var(--black_color);
+    color: var(--withe_color);
     cursor: pointer;
 }
 
@@ -321,8 +317,12 @@ footer {
 
 
 footer a {
-    color: var(--brown_color);
+    color: var(--black_color);
     padding: 0 1em;
+}
+
+footer a:hover {
+    color: var(--blue_color);
 }
 
 footer p {
@@ -341,12 +341,16 @@ footer p {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
-    h2,
+    .tytle {
+        font-size: 2.25rem
+    }
+
+
     nav a {
-        font-size: 1.75rem
+        font-size: 1.85rem
     }
 
     .sub_tytle,
