@@ -260,3 +260,23 @@ footer p {
     padding: 1em;
     text-align: center;
 }
+
+/* media queries */
+
+@media (min-width:650px) {
+
+
+    nav a {
+        font-size: 1.85rem
+    }
+
+
+    p,
+    footer a,
+    footer p {
+        font-size: 1.35rem;
+    }
+
+
+
+}
