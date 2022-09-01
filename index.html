@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- google fonts -->
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,17 +21,76 @@
       href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
       rel="stylesheet"
     />
-
+    
     <link rel="stylesheet" href="styles/index.css" />
 
     <link rel="shortcut icon" href="#" />
+
+    <script src="scripts/index.js" defer></script>
 
     <title>אהרלה ולס - דף הבית</title>
   </head>
 
   <body>
     <header>
-      <nav>
+      <div class="dropdown" data-dropdown>
+        <button class="link" data-dropdown-button>תפריט ראשי</button>
+        <div class="dropdown-menu grid-menu">
+          <div>
+            <div class="dropdown-heading">מאמרים</div>
+            <div class="dropdown-links">
+              <a href="#" class="link">בניית אתרים</a>
+              <a href="#" class="link">אתר רספונסיבי</a>
+              <a href="#" class="link">קידום אתרים אורגני</a>
+              <a href="#" class="link">נגישות</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="dropdown-heading">שירותים ומוצרים</div>
+            <div class="dropdown-links">
+              <a href="#" class="link">אתר תדמית</a>
+              <a href="#" class="link">תחזוקה</a>
+              <a href="#" class="link">עיצוב אתר קיים</a>
+              <a href="#" class="link">חבילות ומחירים</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="dropdown-heading">ללמוד לבנות אתרים</div>
+            <div class="dropdown-links">
+              <a href="#" class="link">HTML</a>
+              <a href="#" class="link">CSS</a>
+              <a href="#" class="link">JavaScript</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="dropdown-heading">כללי</div>
+            <div class="dropdown-links">
+              <a href="#" class="link">שיווק</a>
+              <a href="#" class="link">ניהול</a>
+              <a href="#" class="link">הרשמה לרשימת תפוצה</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="dropdown" data-dropdown>
+        <button class="link" data-dropdown-button>כניסת משתמש רשום</button>
+        <div class="dropdown-menu">
+          <form class="login-form">
+            <label for="email">מייל</label>
+            <input type="email" class="" email id="email" />
+            <label for="password">סיסמא</label>
+            <input type="password" class="password" id="password" />
+            <button type="submit">כניסה</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- <nav>
         <ul>
           <li><a href="index.html">ראשי</a></li>
           <li><a href="articles.html">מאמרים</a></li>
@@ -39,17 +98,18 @@
           <li><a href="about.html">אודות</a></li>
           <li><a href="contact.html">צור קשר</a></li>
         </ul>
-      </nav>
+      </nav> -->
 
-      <div class="cover"></div>
-
-      <h1>
-        בונים אתרים מותאמים אישית
-        <br />
-        כל אתר הוא ייחודי
-      </h1>
     </header>
 
+    <div class="cover"></div>
+
+    <h1>
+      בונים אתרים מותאמים אישית
+      <br />
+      כל אתר הוא ייחודי
+    </h1>
+    
     <main>
       <!-- section 2 -->
 

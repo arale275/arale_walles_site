@@ -15,7 +15,7 @@
   --black_color: #080808;
   --brown_color: rgb(244, 196, 6);
 
-  --my_font2: 'Karantina', cursive;
+  --my_font2: "Karantina", cursive;
 }
 
 /* general */
@@ -67,17 +67,82 @@ button {
 
 /* header settings */
 header {
+  background: var(--brown_color);
+  display: flex;
+  align-items: baseline;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: var(--black_color);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown.active > .link,
+.link:hover {
+  color: var(--withe_color);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.25rem);
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.grid-menu {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 4rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.login-form > input {
+  margin-bottom: 0.5rem;
+}
+
+/* header {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+
 }
 
 nav {
   min-height: 5em;
   background: var(--black_color);
-  color: var(--white_color);
+  color: var(--withe_color);
   position: fixed;
   top: 0;
   width: 100%;
@@ -104,17 +169,16 @@ nav a {
 
 nav a:hover {
   color: var(--brown_color);
-}
+} */
 
 .cover {
   background: url(../images/bg_main33.jpg);
   background-size: cover;
   background-position: center center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
   z-index: -1;
   min-height: 100vh;
 }
@@ -242,7 +306,6 @@ h1 {
   cursor: pointer;
 }
 
-
 /* footer settings */
 
 footer {
@@ -271,10 +334,9 @@ footer p {
 /* media queries */
 
 @media (min-width: 650px) {
-
-    .covar{
-        margin: 0;
-    }
+  .covar {
+    margin: 0;
+  }
   h1 {
     font-size: 4rem;
   }
