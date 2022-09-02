@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  overflow: scroll;
   font-family: var(--my_font2);
   font-weight: 300;
   letter-spacing: 3px;
@@ -67,13 +68,21 @@ button {
 
 /* header settings */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: var(--brown_color);
   display: flex;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
-  gap: 1rem;
+  gap: 8rem;
 }
 
+.dropdown-heading {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 .link {
   background: none;
   border: none;
@@ -95,17 +104,29 @@ header {
 }
 
 .dropdown-menu {
+  max-height: 30em;
+  overflow-y: scroll;
   position: absolute;
-  right: 0;
-  top: calc(100% + 0.25rem);
+  top: calc(100% + 0.5rem);
   background-color: white;
   padding: 0.75rem;
+  min-width: 200px;
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.position_left {
+  left: -0.5rem;
+  text-align: center;
+}
+
+.position_right {
+  right: -0.5rem;
+  text-align: center;
 }
 
 .dropdown.active > .link + .dropdown-menu {
@@ -116,8 +137,7 @@ header {
 
 .grid-menu {
   display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 4rem;
+  gap: 0.5rem;
 }
 
 .dropdown-links {
@@ -130,71 +150,30 @@ header {
   margin-bottom: 0.5rem;
 }
 
-/* header {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-
-}
-
-nav {
-  min-height: 5em;
-  background: var(--black_color);
-  color: var(--withe_color);
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-ul {
-  min-height: 5em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-  margin: 0;
-  list-style: none;
-}
-
-nav a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  padding: 0 1em;
-  color: var(--withe_color);
-  font-weight: 400;
-}
-
-nav a:hover {
-  color: var(--brown_color);
-} */
-
 .cover {
   background: url(../images/bg_main33.jpg);
   background-size: cover;
   background-position: center center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: -1;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 h1 {
   font-size: 2.75rem;
-  margin: 2em 0.5em 0.5em 0.5em;
+  margin: auto 0.5em 0.5em 0.5em;
   padding: 0 0.5em;
   font-family: "Rubik Wet Paint", cursive;
   line-height: 2;
   font-style: italic;
   color: var(--brown_color);
-  border: #080808 1px solid;
   text-shadow: 5px 5px 5px var(--black_color);
   letter-spacing: 7px;
   text-align: center;
+  height: 100vh;
 }
 
 /* main settings */
@@ -313,6 +292,18 @@ footer {
   padding: 2.5em 1.5em 1.5em 1.5em;
   background: var(--brown_color);
   border-top: var(--black_color) dashed 4px;
+  text-align: center;
+  
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 footer a {
@@ -328,12 +319,21 @@ footer a:hover {
 
 footer p {
   padding: 1em;
+  margin: 0;
   text-align: center;
 }
 
 /* media queries */
 
 @media (min-width: 650px) {
+  header {
+    gap: 10rem;
+  }
+
+  .grid-menu {
+    grid-template-columns: repeat(2, max-content);
+    gap: 4rem;
+  }
   .covar {
     margin: 0;
   }
@@ -345,31 +345,21 @@ footer p {
     font-size: 3rem;
   }
 
-  nav a {
-    font-size: 2.15rem;
-  }
-
-  .sub_tytle,
-  .p_style,
-  p,
-  button,
-  footer a,
-  footer p {
-    font-size: 2rem;
-  }
-
-  .main_bg {
-    min-height: 50em;
-  }
-
-  .build_sites_bg,
-  .diy_bg,
-  .tips_bg {
-    min-height: 30em;
+  footer ul {
+    flex-direction: row;
   }
 }
 
 @media (min-width: 950px) {
+
+  header {
+    gap: 20rem;
+  }
+
+  .grid-menu {
+    grid-template-columns: repeat(4, max-content);
+  }
+
   h1 {
     font-size: 5rem;
   }
