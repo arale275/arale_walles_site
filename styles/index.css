@@ -25,7 +25,6 @@ html {
 }
 
 body {
-  overflow: scroll;
   font-family: var(--my_font2);
   font-weight: 300;
   letter-spacing: 3px;
@@ -73,16 +72,15 @@ header {
   width: 100%;
   background: var(--brown_color);
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 0.5rem;
-  gap: 8rem;
+  padding: 0.75rem;
 }
 
 .dropdown-heading {
   font-weight: 700;
   font-size: 1.2rem;
 }
+
 .link {
   background: none;
   border: none;
@@ -103,14 +101,17 @@ header {
   position: relative;
 }
 
+.left {
+  margin-right: auto;
+}
+
 .dropdown-menu {
-  max-height: 30em;
+  max-height: 20em;
   overflow-y: scroll;
   position: absolute;
   top: calc(100% + 0.5rem);
-  background-color: white;
+  background-color: var(--brown_color);
   padding: 0.75rem;
-  min-width: 200px;
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   opacity: 0;
@@ -120,12 +121,14 @@ header {
 }
 
 .position_left {
-  left: -0.5rem;
-  text-align: center;
+  left: -0.75rem;
 }
 
 .position_right {
-  right: -0.5rem;
+  right: -0.75rem;
+  min-width: 100vw;
+  max-width: 100vw;
+  grid-template-columns: repeat(auto-fit, minmax(10em , 1fr));
   text-align: center;
 }
 
@@ -137,7 +140,7 @@ header {
 
 .grid-menu {
   display: grid;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 
 .dropdown-links {
@@ -145,9 +148,22 @@ header {
   flex-direction: column;
   gap: 0.25rem;
 }
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
 
+.login-form > label{
+  
+}
 .login-form > input {
   margin-bottom: 0.5rem;
+  /* margin-right: auto; */
+}
+
+.border {
+  border: var(--black_color) solid 1px;
 }
 
 .cover {
@@ -164,9 +180,9 @@ header {
 
 h1 {
   font-size: 2.75rem;
-  margin: auto 0.5em 0.5em 0.5em;
+  margin: 5em 0.5em 0.5em 0.5em;
   padding: 0 0.5em;
-  font-family: "Rubik Wet Paint", cursive;
+  /* font-family: "Rubik Wet Paint", cursive; */
   line-height: 2;
   font-style: italic;
   color: var(--brown_color);
@@ -293,7 +309,6 @@ footer {
   background: var(--brown_color);
   border-top: var(--black_color) dashed 4px;
   text-align: center;
-  
 }
 
 footer ul {
@@ -326,14 +341,7 @@ footer p {
 /* media queries */
 
 @media (min-width: 650px) {
-  header {
-    gap: 10rem;
-  }
-
-  .grid-menu {
-    grid-template-columns: repeat(2, max-content);
-    gap: 4rem;
-  }
+ 
   .covar {
     margin: 0;
   }
@@ -351,14 +359,6 @@ footer p {
 }
 
 @media (min-width: 950px) {
-
-  header {
-    gap: 20rem;
-  }
-
-  .grid-menu {
-    grid-template-columns: repeat(4, max-content);
-  }
 
   h1 {
     font-size: 5rem;
