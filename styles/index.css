@@ -57,10 +57,7 @@ img {
 }
 
 button {
-  border: none;
-  border-radius: 2em;
   padding: 0.75em 1.5em;
-  display: block;
   margin: 1em auto;
   font-weight: 700;
 }
@@ -70,8 +67,6 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  /* background: var(--black_color);
-  color: var(--brown_color); */
   display: flex;
   align-items: center;
   padding: 0.75rem;
@@ -81,7 +76,6 @@ header {
 
 .nav-scrolled {
   background: var(--withe_color);
-  opacity: 0.95;
   box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -93,30 +87,44 @@ header {
 
 .link {
   background: none;
-  border: none;
+  border-bottom: 2px solid var(--black_color);
   text-decoration: none;
   color: var(--black_color);
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
   padding: 0.125em;
+  transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
-button.link{
-  all: unset;
+@media (hover :hover) {
+.link:hover {
+  color: var(--black_color);
+}
+a.link:hover {
+  color: var(--withe_color);
+}
+.login-form > button.link:hover{
+  color: var(--withe_color);
+}
+}
+
+button.link {
+  border: none;
   font-weight: 700;
   color: var(--brown_color);
 }
 
-button.link:hover{
-  color: var(--black_color);
-  border-radius: none;
-}
 
+
+/* @media (hover :hover) {
 .dropdown.active > .link,
 .link:hover {
-  border-bottom: 1px solid var(--withe_color);
+  all: unset;
+  border-bottom: 2px solid var(--black_color);
 }
+} */
+
 
 .dropdown {
   position: relative;
@@ -130,13 +138,15 @@ button.link:hover{
   max-height: 70vh;
   overflow: auto;
   position: absolute;
+  top: 2.5em;
   background: var(--black_color);
   padding: 1.25em;
   border-radius: 30px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px) scale(1, 0);
+  transform-origin: top;
+  transition: 50ms ease-in-out 50ms;
+  pointer-events: none;
 }
 
 .position_left {
@@ -152,8 +162,8 @@ button.link:hover{
 }
 
 .dropdown.active > .link + .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1, 1);
+  transition: 200ms ease-in-out 50ms;
   pointer-events: auto;
 }
 
@@ -167,6 +177,7 @@ button.link:hover{
   flex-direction: column;
   gap: 0.25rem;
 }
+
 .login-form {
   display: flex;
   flex-direction: column;
@@ -176,7 +187,16 @@ button.link:hover{
 
 .login-form > input {
   margin-bottom: 0.5rem;
-  border-radius: 30px;
+  /* padding: 0.5em 0.5em; */
+  border-width: 1px;
+  padding: 0.75em;
+}
+
+input:focus-visible {
+  all: unset;
+  background: var(--withe_color);
+  color: var(--black_color);
+  /* padding: 0.5em 0.5em; */
 }
 
 .border {
@@ -207,7 +227,6 @@ h1 {
   font-size: 2.75rem;
   margin: 5em 0.5em 0.5em 0.5em;
   padding: 0 0.5em;
-  /* font-family: "Rubik Wet Paint", cursive; */
   line-height: 2;
   font-style: italic;
   color: var(--brown_color);
@@ -215,6 +234,13 @@ h1 {
   letter-spacing: 7px;
   text-align: center;
   height: 100vh;
+}
+
+h1 > .link {
+  background: var(--brown_color);
+  border-radius: 15px;
+  text-shadow: none;
+  box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* main settings */
@@ -256,22 +282,31 @@ h1 {
   transition-delay: 150ms;
 }
 
+@media (hover : hover) {
 .build_sites_img:hover {
   transform: rotate(-5deg) translate(-20px, -20px) scale(1.1);
   transition: 650ms;
   transition-delay: 150ms;
   box-shadow: -50px 50px 10px 10px var(--black_color);
 }
-
-.build_sites_button {
-  background: var(--withe_color);
-  color: var(--black_color);
 }
 
+.build_sites_button {
+  /* background: var(--withe_color); */
+  color: var(--black_color);
+  margin-bottom: 2em;
+  border-radius: 30px;
+  padding: 0.75em 1.5em;
+}
+
+@media (hover: hover) {
 .build_sites_button:hover {
   background: var(--brown_color);
   color: var(--withe_color);
+  border-radius: 30px;
+  padding: 0.75em 1.5em;
   cursor: pointer;
+}
 }
 
 /* section 3 */
@@ -309,21 +344,30 @@ h1 {
   transition-delay: 300ms;
 }
 
+@media (hover: hover) {
+
 .diy_img:hover {
   box-shadow: -50px 50px 10px 10px rgba(0, 0, 0, 0.35);
   transform: translate(60px, -100px);
   transition: 800ms;
   transition-delay: 50ms;
 }
-
-.diy_button {
-  background: var(--withe_color);
-  color: var(--black_color);
 }
 
+.diy_button {
+  /* background: var(--withe_color); */
+  color: var(--black_color) !important;
+  border-radius: 30px;
+  padding: 0.75em 1.5em;
+  margin-bottom: 2em;
+}
+
+@media (hover :hover) {
 .diy_button:hover {
-  color: var(--brown_color);
+  background: var(--black_color);
+  color: var(--withe_color) !important;
   cursor: pointer;
+}
 }
 
 /* footer settings */
@@ -353,8 +397,10 @@ footer a {
   font-weight: 400;
 }
 
+@media (hover: hover) {
 footer a:hover {
   color: var(--withe_color);
+}
 }
 
 footer p {
@@ -380,6 +426,8 @@ footer p {
 
   footer ul {
     flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
   }
 }
 
