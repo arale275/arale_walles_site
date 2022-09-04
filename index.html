@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- google users log in -->
+    <meta name="google-signin-scope" content="profile email" />
+    <meta
+      name="google-signin-client_id"
+      content="627570126570-9lsvj2u6040ebpfl92p3af3vg1fe18pe.apps.googleusercontent.com"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <!-- google fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,18 +23,12 @@
       rel="stylesheet"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
-      rel="stylesheet"
-    />
-    
     <link rel="stylesheet" href="styles/index.css" />
 
     <link rel="shortcut icon" href="#" />
 
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js" async defer></script>
+    <script src="scripts/user_lo_in.js" async defer></script>
 
     <title>אהרלה ולס - דף הבית</title>
   </head>
@@ -34,63 +36,68 @@
   <body>
     <header>
       <nav>
-      <div class="dropdown" data-dropdown>
-        <button class="link" data-dropdown-button>תפריט ראשי</button>
-        <div class="dropdown-menu position_right grid-menu">
-          <div class="border">
-            <div class="dropdown-heading">מאמרים</div>
-            <div class="dropdown-links">
-              <a href="articles.html" class="link">בניית אתרים</a>
-              <a href="#" class="link">אתר רספונסיבי</a>
-              <a href="#" class="link">קידום אתרים אורגני</a>
-              <a href="#" class="link">נגישות</a>
+        <div class="dropdown" data-dropdown>
+          <button class="link" data-dropdown-button>תפריט ראשי</button>
+          <div class="dropdown-menu position_right grid-menu">
+            <div class="border">
+              <div class="dropdown-heading">מאמרים</div>
+              <div class="dropdown-links">
+                <a href="articles.html" class="link">בניית אתרים</a>
+                <a href="#" class="link">אתר רספונסיבי</a>
+                <a href="#" class="link">קידום אתרים אורגני</a>
+                <a href="#" class="link">נגישות</a>
+              </div>
             </div>
-          </div>
 
-          <div class="border">
-            <div class="dropdown-heading">שירותים ומוצרים</div>
-            <div class="dropdown-links">
-              <a href="our_products.html" class="link">אתר תדמית</a>
-              <a href="#" class="link">תחזוקה</a>
-              <a href="#" class="link">עיצוב אתר קיים</a>
-              <a href="#" class="link">חבילות ומחירים</a>
+            <div class="border">
+              <div class="dropdown-heading">שירותים ומוצרים</div>
+              <div class="dropdown-links">
+                <a href="our_products.html" class="link">אתר תדמית</a>
+                <a href="#" class="link">תחזוקה</a>
+                <a href="#" class="link">עיצוב אתר קיים</a>
+                <a href="#" class="link">חבילות ומחירים</a>
+              </div>
             </div>
-          </div>
 
-          <div class="border">
-            <div class="dropdown-heading">ללמוד לבנות אתרים</div>
-            <div class="dropdown-links">
-              <a href="#" class="link">HTML</a>
-              <a href="#" class="link">CSS</a>
-              <a href="#" class="link">JavaScript</a>
+            <div class="border">
+              <div class="dropdown-heading">ללמוד לבנות אתרים</div>
+              <div class="dropdown-links">
+                <a href="#" class="link">HTML</a>
+                <a href="#" class="link">CSS</a>
+                <a href="#" class="link">JavaScript</a>
+              </div>
             </div>
-          </div>
 
-          <div class="border">
-            <div class="dropdown-heading">כללי</div>
-            <div class="dropdown-links">
-              <a href="#" class="link">שיווק</a>
-              <a href="#" class="link">ניהול</a>
-              <a href="contact.html" class="link">הרשמה לרשימת תפוצה</a>
+            <div class="border">
+              <div class="dropdown-heading">כללי</div>
+              <div class="dropdown-links">
+                <a href="#" class="link">שיווק</a>
+                <a href="#" class="link">ניהול</a>
+                <a href="contact.html" class="link">הרשמה לרשימת תפוצה</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      
-      <div class="dropdown left" data-dropdown>
-        <button class="link" data-dropdown-button>כניסת משתמש רשום</button>
-        <div class="dropdown-menu position_left">
-          <form class="login-form">
-            <label for="email">מייל</label>
-            <input type="email" class="" email id="email" />
-            <label for="password">סיסמא</label>
-            <input type="password" class="password" id="password" />
-            <button class="link" type="submit">כניסה</button>
-          </form>
+        <div class="dropdown left" data-dropdown>
+          <button class="link" data-dropdown-button>כניסת משתמש רשום</button>
+          <div class="dropdown-menu position_left">
+            <div
+              class="g-signin2"
+              data-onsuccess="onSignIn"
+              data-theme="dark"
+            ></div>
+
+            <form class="login-form">
+              <label for="email">מייל</label>
+              <input type="email" class="" email id="email" />
+              <label for="password">סיסמא</label>
+              <input type="password" class="password" id="password" />
+              <button class="link" type="submit">כניסה</button>
+            </form>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
       <!-- <nav>
         <ul>
           <li><a href="index.html">ראשי</a></li>
@@ -100,22 +107,18 @@
           <li><a href="contact.html">צור קשר</a></li>
         </ul>
       </nav> -->
-      
     </header>
-
-    
 
     <main>
       <div class="change_bg">
-      <div class="cover"></div>
-    <h1>
-      בונים אתרים מותאמים אישית
-      <br />  
-      כל אתר הוא <a href="#" class="link">ייחודי</a>
-    </h1>
-    
-  </div>
-    
+        <div class="cover"></div>
+        <h1>
+          בונים אתרים מותאמים אישית
+          <br />
+          כל אתר הוא <a href="#" class="link">ייחודי</a>
+        </h1>
+      </div>
+
       <!-- section 2 -->
 
       <div class="build_sites_bg">
