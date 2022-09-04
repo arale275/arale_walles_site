@@ -70,15 +70,23 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--brown_color);
+  /* background: var(--black_color);
+  color: var(--brown_color); */
   display: flex;
   align-items: center;
   padding: 0.75rem;
 }
 
+/* change the background color*/
+
+.nav-scrolled {
+  background: var(--withe_color);
+}
+
 .dropdown-heading {
   font-weight: 700;
   font-size: 1.2rem;
+  padding: 0.75em;
 }
 
 .link {
@@ -89,12 +97,23 @@ header {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
-  padding: 0;
+  padding: 0.125em;
+}
+
+button.link{
+  all: unset;
+  font-weight: 700;
+  color: var(--brown_color);
+}
+
+button.link:hover{
+  color: var(--black_color);
+  border-radius: none;
 }
 
 .dropdown.active > .link,
 .link:hover {
-  color: var(--withe_color);
+  border-bottom: 1px solid var(--withe_color);
 }
 
 .dropdown {
@@ -106,22 +125,20 @@ header {
 }
 
 .dropdown-menu {
-  max-height: 20em;
-  overflow-y: scroll;
+  max-height: 70vh;
+  overflow: auto;
   position: absolute;
-  top: calc(100% + 0.5rem);
-  background-color: var(--brown_color);
-  padding: 0.75rem;
-  border-radius: 0.25rem;
+  background: var(--black_color);
+  padding: 1.25em;
+  border-radius: 30px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   opacity: 0;
-  pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
 .position_left {
-  left: -0.75rem;
+  left: -1em;
 }
 
 .position_right {
@@ -152,18 +169,24 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  color: var(--brown_color);
 }
 
-.login-form > label{
-  
-}
 .login-form > input {
   margin-bottom: 0.5rem;
-  /* margin-right: auto; */
+  border-radius: 30px;
 }
 
 .border {
-  border: var(--black_color) solid 1px;
+  border: var(--brown_color) solid 1px;
+  border-radius: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.75em;
+  min-height: 12em;
+  background: var(--brown_color);
+  color: var(--black_color);
 }
 
 .cover {
