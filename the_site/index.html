@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- google login -->
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="google-signin-client_id"
@@ -28,7 +28,7 @@
 
     <link rel="shortcut icon" href="#" />
 
-    <script src="scripts/index.js"  defer></script>
+    <script src="scripts/index.js" defer></script>
 
     <title>אהרלה ולס - דף הבית</title>
   </head>
@@ -80,36 +80,28 @@
         </div>
 
         <div class="dropdown left" data-dropdown>
-          <button class="link" data-dropdown-button>כניסת משתמש רשום</button>
-          <div class="dropdown-menu position_left">
-            <div
-              class="g-signin2"
-              data-onsuccess="onSignIn"
-              data-theme="dark"
-            ></div>
-
-            <form class="login-form">
-              <label for="email">מייל</label>
-              <input type="email" class="" email id="email" />
-              <label for="password">סיסמא</label>
-              <input type="password" class="password" id="password" />
-              <button class="link" type="submit">כניסה</button>
-            </form>
-          </div>
+          <!-- google login users -->
+          <div
+            id="g_id_onload"
+            data-client_id="YOUR_GOOGLE_CLIENT_ID"
+            data-login_uri="https://your.domain/your_login_endpoint"
+            data-auto_prompt="false"
+          ></div>
+          <div
+            class="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="rectangular"
+            data-logo_alignment="left"
+          ></div>
         </div>
       </nav>
-      <!-- <nav>
-        <ul>
-          <li><a href="index.html">ראשי</a></li>
-          <li><a href="articles.html">מאמרים</a></li>
-          <li><a href="our_products.html">המוצרים שלנו</a></li>
-          <li><a href="about.html">אודות</a></li>
-          <li><a href="contact.html">צור קשר</a></li>
-        </ul>
-      </nav> -->
     </header>
 
     <main>
+      <!-- section 1 -->
       <div class="change_bg">
         <div class="cover"></div>
         <h1>
