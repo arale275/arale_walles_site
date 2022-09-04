@@ -81,6 +81,8 @@ header {
 
 .nav-scrolled {
   background: var(--withe_color);
+  opacity: 0.95;
+  box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
 .dropdown-heading {
