@@ -127,14 +127,14 @@ button.link {
 }
 
 .center {
-  margin-right: 5%;
+  margin-right: 3%;
 }
 
 .dropdown-menu {
   max-height: 70vh;
   overflow: auto;
   position: absolute;
-  top: 2.5em;
+  top: 3em;
   background: var(--black_color);
   padding: 1.25em;
   border-radius: 30px;
