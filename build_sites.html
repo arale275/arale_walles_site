@@ -7,31 +7,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles/articles.css">
 
     <link rel="shortcut icon" href="#">
 
-    <title>מאמרים</title>
+    <title>בניית אתרים</title>
 
 </head>
 
 <header>
+    <nav>
+      <div class="dropdown" data-dropdown>
+        <button class="link" data-dropdown-button>תפריט ראשי</button>
+        <div class="dropdown-menu position_right grid-menu">
+          <div class="border">
+            <div class="dropdown-heading">מאמרים</div>
+            <div class="dropdown-links">
+              <a href="articles.html" class="link">בניית אתרים</a>
+              <a href="#" class="link">אתר רספונסיבי</a>
+              <a href="#" class="link">קידום אתרים אורגני</a>
+              <a href="#" class="link">נגישות</a>
+            </div>
+          </div>
 
-    <a href="index.html" class="logo_link">
-            <img src="images/logo2.png" alt="logo" class="logo" width="200" height="88">
-        </a>
+          <div class="border">
+            <div class="dropdown-heading">שירותים ומוצרים</div>
+            <div class="dropdown-links">
+              <a href="our_products.html" class="link">אתר תדמית</a>
+              <a href="#" class="link">תחזוקה</a>
+              <a href="#" class="link">עיצוב אתר קיים</a>
+              <a href="#" class="link">חבילות ומחירים</a>
+            </div>
+          </div>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">ראשי</a></li>
-                <li><a href="articles.html">מאמרים</a></li>
-                <li><a href="our_products.html">המוצרים שלנו</a></li>
-                <li><a href="about.html">אודות</a></li>
-                <li><a href="contact.html">צור קשר</a></li>
-            </ul>
-        </nav>
-    
-</header>
+          <div class="border">
+            <div class="dropdown-heading">ללמוד לבנות אתרים</div>
+            <div class="dropdown-links">
+              <a href="#" class="link">HTML</a>
+              <a href="#" class="link">CSS</a>
+              <a href="#" class="link">JavaScript</a>
+            </div>
+          </div>
+
+          <div class="border">
+            <div class="dropdown-heading">כללי</div>
+            <div class="dropdown-links">
+              <a href="#" class="link">שיווק</a>
+              <a href="#" class="link">ניהול</a>
+              <a href="contact.html" class="link">הרשמה לרשימת תפוצה</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown left" data-dropdown>
+        <!-- google login users -->
+        <div
+          id="g_id_onload"
+          data-client_id="627570126570-rale1a55on0f3sbbo74r8njhnna1j8jd.apps.googleusercontent.com"
+          data-auto_select="true"
+          data-login_uri="https://www.arale-walles.com"
+          data-auto_prompt="false">
+        </div>
+        <div
+          class="g_id_signin"
+          data-type="standard"
+          data-theme="filled_black"
+          data-size="large"
+          data-theme="outline"
+          data-text="continue_with"
+          data-shape="circle"
+          data-logo_alignment="center"
+          data-width="400"
+        ></div>
+        <div class="g_id_signout">Sign Out</div>
+      </div>
+    </nav>
+  </header>
 
 
 <main>
