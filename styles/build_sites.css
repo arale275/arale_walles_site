@@ -126,6 +126,10 @@ button.link {
   margin-right: auto;
 }
 
+.center {
+  margin-right: 5%;
+}
+
 .dropdown-menu {
   max-height: 70vh;
   overflow: auto;
