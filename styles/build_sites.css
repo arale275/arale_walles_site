@@ -281,59 +281,70 @@ h1 > .link {
     max-width: 35ch;
 }
 
-
 /* footer settings */
 
 footer {
-    margin: 0;
-    padding: 2.5em 1.5em 1.5em 1.5em;
-    background: var(--blue_color);
+  margin: 0;
+  padding: 2.5em 1.5em 1.5em 1.5em;
+  background: var(--brown_color);
+  border-top: var(--black_color) dashed 4px;
+  text-align: center;
 }
 
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 footer a {
-    color: black;
-    padding: 0 1em;
-    text-decoration: none;
-    font-weight: 600;
+  color: black;
+  padding: 0 1em;
+  text-decoration: none;
+  font-weight: 400;
 }
 
+@media (hover: hover) {
 footer a:hover {
-    color: var(--withe_color);
+  color: var(--withe_color);
+}
 }
 
 footer p {
-    padding: 1em;
-    text-align: center;
+  padding: 1em;
+  margin: 0;
+  text-align: center;
 }
-
-
-
 
 /* media queries */
 
-@media (min-width:650px) {
+@media (min-width: 650px) {
+ 
+  .covar {
+    margin: 0;
+  }
+  h1 {
+    font-size: 4rem;
+  }
 
-   
-    h1 {
-        font-size: 2rem;
-    }
+  .tytle {
+    font-size: 3rem;
+  }
 
-    h2,
-    nav a {
-        font-size: 1.85rem
-    }
+  footer ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+  }
+}
 
-    .sub_tytle,
-    .p_style,
-    button,
-    footer a,
-    footer p {
-        font-size: 1.35rem;
-    }
+@media (min-width: 950px) {
 
-    .main_bg {
-        min-height: 50em;
-    }
-
+  h1 {
+    font-size: 5rem;
+  }
 }
