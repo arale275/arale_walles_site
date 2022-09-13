@@ -8,14 +8,15 @@
     box-sizing: border-box;
 }
 
+
 /* my costum properties */
 
 :root {
-    --blue_color: rgb(0, 159, 253); 
+    --blue_color: rgb(0, 159, 253);
     --withe_color: rgb(255, 255, 255);
     --grey_color: rgb(240, 240, 240);
     --black_color: rgb(0, 0, 0);
-    --brown_color: rgb(255, 164, 0); 
+    --brown_color: rgb(255, 164, 0);
 
 
     --my_font2: sans-serif;
@@ -39,13 +40,6 @@ h1 {
     font-size: 1.5rem;
     font-weight: 900;
     padding: 1em;
-    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, -17px 32px 26px 3px rgba(0, 0, 0, 0.3);
-    border-radius: 1em;
-    color: var(--blue_color);
-    background: var(--withe_color);
-    max-width: 35ch;
-    display: flex;
-    justify-content: center;
 }
 
 h2 {
@@ -53,7 +47,6 @@ h2 {
     font-weight: 700;
     padding: 1em;
 }
-
 
 .tytle {
     padding: 0.5em;
@@ -70,17 +63,6 @@ h2 {
 .p_style {
     max-width: 60ch;
     text-align: start;
-}
-
-button {
-    border: var(--black_color) 0.2em solid;
-    border-radius: 2em;
-    padding: 0.75em 1.5em;
-    display: block;
-    margin: 1em auto;
-    font-weight: 800;
-    background: var(--blue_color);
-    color: var(--withe_color);
 }
 
 
@@ -121,6 +103,79 @@ nav a {
 
 nav a:hover {
     color: var(--withe_color);
+}
+
+
+/* main settings */
+
+
+input {
+    all: unset;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--grey_color);
+    color: var(--black_color);
+    border: 1px solid black;
+    max-width: 40em;
+    margin: 1.5em auto;
+    border-radius: 2em;
+    padding: 1.5em;
+}
+
+.form_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* border: solid 1px red; */
+    padding: 0.25em 1em;
+}
+
+.form_button{
+    background: rgb(125, 47, 226);
+    color: white;
+    padding: 0.5em 2em;
+    margin: 1em auto;
+    border-radius: 1em;
+    width: 90%;
+    box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.38);
+}
+
+.mail,
+.phone {
+    width: 90%;
+    background: white;
+    margin: 1em auto;
+    border-radius: 1em;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+}
+
+.password {
+    width: 90%;
+    background: white;
+    margin: 0 auto 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+}
+
+.first-name,
+.last-name {
+    width: 48%;
+    background: white;
+    border-radius: 1em;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+}
+
+.flex {
+display: flex;
+width: 90%;
+justify-content: space-between;
 }
 
 
