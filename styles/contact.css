@@ -73,12 +73,10 @@ button {
 
 /* header settings */
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background: var(--withe_color);
-  min-height: 5em;
-  z-index: 99;
 }
 
 /* change the background color*/
@@ -191,16 +189,61 @@ button.link {
   color: var(--black_color);
 }
 
-
 /* style the mail-cheep form */
 
 .form_style {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    background: red;
-    margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.validate {
+  background: var(--brown_color);
+  padding: 2em;
+}
+
+h2 {
+  text-align: center;
+}
+
+.mc-field-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+}
+
+label {
+  border: none;
+  border-radius: 10px;
+  font-size: 1.75rem;
+}
+
+.clearfoot {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 1em 0 0 0;
+  background: none;
+}
+
+input {
+  border: none;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-radius: 15px;
+}
+
+.button {
+  padding: 0.25em 0.75em;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.spacing {
+  min-height: 7vh;
 }
 
 /* footer settings */
