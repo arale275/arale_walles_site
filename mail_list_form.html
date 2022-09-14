@@ -69,7 +69,11 @@
     <main>
       <div class="change_bg">
         <div class="cover"></div>
-        <h1></h1>
+        <h1>
+          להתעדכן בכל מה <br />
+          שחדש אצלינו <br />
+          ⬇ ⬇ ⬇
+        </h1>
       </div>
 
       <div class="form">
@@ -106,21 +110,24 @@
           }
 
           #sib-container input:-ms-input-placeholder {
-            text-align: center;
+            text-align: right;
+            font-weight: 700;
             font-family: "Helvetica", sans-serif;
-            color: #f4c406;
+            color: #080808;
           }
 
           #sib-container input::placeholder {
-            text-align: center;
+            text-align: right;
+            font-weight: 700;
             font-family: "Helvetica", sans-serif;
-            color: #f4c406;
+            color: #080808;
           }
 
           #sib-container textarea::placeholder {
-            text-align: center;
+            text-align: right;
+            font-weight: 700;
             font-family: "Helvetica", sans-serif;
-            color: #f4c406;
+            color: #080808;
           }
         </style>
         <link
@@ -213,7 +220,7 @@
               <form
                 id="sib-form"
                 method="POST"
-                action="https://ca1a67ad.sibforms.com/serve/MUIEAJlvCCQ48nQt2zqDbDer3M-j272c6poW0FyzTpj8-Sk2f5fXz2koEsGR2ZoV0Trc_DiNVOKrDzqqRo1ZofpZgIdcoWyDSHmfDgghnwF_iQDLlAgXXLFTKDy2wkzCGJL4Ddx1KH4nDZmbtTMyzYbrLfcZKgNauG5QZviaoRUUaxpTZMryTJ5gJpWB_ORjhCcAgaFk_jorBwlX"
+                action="https://ca1a67ad.sibforms.com/serve/MUIEAI13uup1qvSFXnuvp8xeh4HaINg9FxnVXgNy2huhI2ttoVd_7uhPq3_req28EMZnP00RQNzYtWeGVBNrNV-ifUWO3A7T1CYxRErDUu5MCSHDTGOPNQxALC3SoXigHHlDXSLVb3mbPQ86DbQBNgE3Ig4p-LCtlAjFDJpgK7rOX9_sQB61ZmZBA2ln9InnpF7cRitkAIzw2_x0"
                 data-type="subscription"
               >
                 <div style="padding: 16px 0">
@@ -228,7 +235,14 @@
                       background-color: transparent;
                     "
                   >
-                    <p>הרשמה לרשימת תפוצה</p>
+                    <p>הצטרפות לרשימת תפוצה</p>
+                  </div>
+                </div>
+                <div style="padding: 16px 0">
+                  <div class="sib-form-block sib-divider-form-block">
+                    <div
+                      style="border: 0; border-bottom: 1px solid #e5edf6"
+                    ></div>
                   </div>
                 </div>
                 <div style="padding: 16px 0">
@@ -242,6 +256,7 @@
                             id="EMAIL"
                             name="EMAIL"
                             autocomplete="off"
+                            placeholder="כתובת המייל שלך..."
                             data-required="true"
                             required
                           />
@@ -265,61 +280,59 @@
                   </div>
                 </div>
                 <div style="padding: 16px 0">
-                  <div class="sib-optin sib-form-block">
-                    <div class="form__entry entry_mcq">
-                      <div class="form__label-row">
-                        <div class="entry__choice">
-                          <label>
-                            <input
-                              type="checkbox"
-                              class="input_replaced"
-                              value="1"
-                              id="OPT_IN"
-                              name="OPT_IN"
-                            />
-                            <span class="checkbox checkbox_tick_positive"></span
-                            ><span
-                              style="
-                                font-size: 20px;
-                                text-align: left;
-                                font-family: 'Helvetica', sans-serif;
-                                color: #f4c406;
-                                background-color: transparent;
-                              "
-                              ><p>
-                                אני מאשר לקבל את המיילים שלך ומקבל את הצהרת
-                                פרטיות הנתונים.
-                              </p></span
-                            >
-                          </label>
-                        </div>
-                      </div>
-                      <label
-                        class="entry__error entry__error--primary"
-                        style="
-                          font-size: 16px;
-                          text-align: left;
-                          font-family: 'Helvetica', sans-serif;
-                          color: #661d1d;
-                          background-color: #ffeded;
-                          border-radius: 3px;
-                          border-color: #ff4949;
-                        "
-                      >
-                      </label>
-                      <label
-                        class="entry__specification"
-                        style="
-                          font-size: 12px;
-                          text-align: center;
-                          font-family: 'Helvetica', sans-serif;
-                          color: #f4c406;
-                        "
-                      >
-                        אתה יכול לבטל את המנוי בכל עת באמצעות הקישור במיילים
-                        שלנו.
-                      </label>
+                  <div
+                    class="sib-form-block"
+                    style="
+                      font-size: 24px;
+                      text-align: center;
+                      font-weight: 700;
+                      font-family: 'Helvetica', sans-serif;
+                      color: #f4c406;
+                      background-color: transparent;
+                    "
+                  >
+                    <div class="sib-text-form-block">
+                      <p>
+                        לאחר שליחת הטופס יש להיכנס למייל כדי לאשר את
+                        ההרשמה.&nbsp;
+                      </p>
                     </div>
+                  </div>
+                </div>
+                <div style="padding: 16px 0">
+                  <div class="sib-form-block sib-divider-form-block">
+                    <div
+                      style="border: 0; border-bottom: 1px solid #e5edf6"
+                    ></div>
+                  </div>
+                </div>
+                <div style="padding: 16px 0">
+                  <div
+                    class="sib-form-block"
+                    style="
+                      font-size: 24px;
+                      text-align: center;
+                      font-weight: 700;
+                      font-family: 'Helvetica', sans-serif;
+                      color: #f4c406;
+                      background-color: transparent;
+                    "
+                  >
+                    <div class="sib-text-form-block">
+                      <p>
+                        <strong
+                          >אפשר לבטל את המנוי בכל עת באמצעות הקישור במיילים
+                          שלנו.</strong
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 16px 0">
+                  <div class="sib-form-block sib-divider-form-block">
+                    <div
+                      style="border: 0; border-bottom: 1px solid #e5edf6"
+                    ></div>
                   </div>
                 </div>
                 <div style="padding: 16px 0">

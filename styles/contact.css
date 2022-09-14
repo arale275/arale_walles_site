@@ -23,7 +23,7 @@
   --withe_color: rgb(255, 255, 255);
   --grey_color: rgb(240, 240, 240);
   --black_color: hsl(0, 0%, 3%);
-  --brown_color: rgb(244, 196, 6);
+  --brown_color: #f4c406;
 
   --my_font1: "trashim", cursive;
   --my_font2: "Shmulik", cursive;
@@ -195,13 +195,13 @@ button.link {
 .cover {
   background: linear-gradient(
       to top,
-      rgba(114, 112, 112, 0.555),
-      rgba(75, 74, 74, 0.555),
-      rgba(51, 50, 50, 0.555)
+      rgba(88, 96, 121, 0.925),
+      rgba(34, 32, 70, 0.555),
+      rgba(97, 168, 162, 0.507)
     ),
-    url(../images/bg_main33.jpg);
+    url(../images/vlad-hilitanu-1FI2QAYPa-Y-unsplash.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: center ;
   position: fixed;
   top: 0;
   left: 0;
@@ -214,81 +214,20 @@ h1 {
   max-width: 75%;
   font-family: var(--my_font2);
   font-size: 2.75rem;
-  padding: 0 0.5em;
+  padding: 0;
   line-height: 2.5;
   color: var(--brown_color);
-  text-shadow: -3px 2px 1px var(--withe_color);
+  text-shadow: -10px 10px 15px var(--black_color);
   letter-spacing: 10px;
   text-align: center;
   height: 75vh;
-  margin: 1.75em auto 0 auto;
+  margin: 2.5em auto 0 auto;
 }
-
-
 
 /* main settings */
-
-/* style the mail-cheep form */
-
-.form_style {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+.sib-sms-select__title {
+  margin-right: 0;
 }
-
-.validate {
-  background: var(--brown_color);
-  padding: 2em;
-}
-
-h2 {
-  text-align: center;
-}
-
-.mc-field-group {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5em 0;
-}
-
-label {
-  border: none;
-  border-radius: 10px;
-  font-size: 1.75rem;
-}
-
-.clearfoot {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 0;
-  margin: 1em 0 0 0;
-  background: none;
-}
-
-input {
-  border: none;
-  padding: 0.25em;
-  margin: 0.25em;
-  border-radius: 15px;
-}
-
-.button {
-  padding: 0.25em 0.75em;
-  font-size: 1.75rem;
-  cursor: pointer;
-}
-
-.spacing {
-  min-height: 7vh;
-}
-
-
-
-
-
 /* footer settings */
 
 footer {
@@ -307,14 +246,13 @@ footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  
 }
 
 footer li {
-padding: 0.25em 0.75em;
-margin: 0.5em 0;
-background: var(--brown_color);
-border-radius: 15px;
+  padding: 0.25em 0.75em;
+  margin: 0.5em 0;
+  background: var(--brown_color);
+  border-radius: 15px;
 }
 
 footer a {
@@ -357,7 +295,6 @@ footer p {
     font-size: 3rem;
   }
 
-
   footer ul {
     flex-direction: row;
     justify-content: center;
@@ -377,6 +314,4 @@ footer p {
   .dropdown-menu {
     top: 4em;
   }
-
- 
 }
