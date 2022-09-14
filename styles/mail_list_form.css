@@ -1,225 +1,325 @@
-/* fonts */
-
 /* reset */
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "trashim";
+  src: url("../fonts/trashimclm-bold-webfont.woff");
+}
+
+@font-face {
+  font-family: "Shmulik";
+  src: url("../fonts/ShmulikCLM.woff");
+}
 
 /* my costum properties */
 
 :root {
-    --blue_color: rgb(0, 159, 253);
-    --withe_color: rgb(255, 255, 255);
-    --grey_color: rgb(240, 240, 240);
-    --black_color: rgb(0, 0, 0);
-    --brown_color: rgb(255, 164, 0);
+  --blue_color: rgb(34, 217, 102);
+  --withe_color: rgb(255, 255, 255);
+  --grey_color: rgb(240, 240, 240);
+  --black_color: hsl(0, 0%, 3%);
+  --brown_color: rgb(244, 196, 6);
 
-
-    --my_font2: sans-serif;
+  --my_font1: "trashim", cursive;
+  --my_font2: "Shmulik", cursive;
 }
-
-
 
 /* general */
 
 html {
-    direction: rtl;
+  direction: rtl;
 }
 
 body {
-    font-family: var(--my_font2);
-    font-weight: 500;
-    margin: 0;
+  font-family: var(--my_font2);
+  letter-spacing: 3px;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0;
 }
 
-h1 {
-    font-size: 1.5rem;
-    font-weight: 900;
-    padding: 1em;
-}
-
-h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding: 1em;
+img {
+  max-width: 100%;
 }
 
 .tytle {
-    padding: 0.5em;
-    text-align: center;
-    margin-top: 1.5em;
+  font-size: 2.125rem;
+  font-family: var(--my_font1);
+  padding: 0.5em;
+  text-align: center;
 }
 
 .sub_tytle {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--my_font1);
+  color: var(--brown_color);
+  margin-bottom: 1em;
 }
 
 .p_style {
-    max-width: 60ch;
-    text-align: start;
+  font-size: 1.5rem;
+  padding: 1em;
+  max-width: 60ch;
+  margin: 0 auto;
 }
 
+button {
+  padding: 0.75em 1.5em;
+  margin: 1em auto;
+}
 
 /* header settings */
-
 header {
-    background: var(--blue_color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
-.logo_link {
-    display: flex;
-    justify-content: center;
-    background: var(--withe_color);
+/* change the background color*/
+
+.nav-scrolled {
+  background: var(--withe_color);
+  box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.5);
+  color: var(--black_color);
 }
 
 nav {
-    min-height: 5em;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
 }
 
-ul {
-    min-height: 5em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    margin: 0;
-    list-style: none;
+.dropdown-heading {
+  font-family: var(--my_font2);
+  font-size: 1.75rem;
+  padding: 0.75em;
 }
 
-nav a {
-    text-decoration: none;
-    font-size: 1.125rem;
-    padding: 0 1em;
-    color: black;
-    font-weight: 800;
+.link {
+  background: none;
+  border-bottom: 2px solid var(--black_color);
+  text-decoration: none;
+  color: var(--black_color);
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-family: var(--my_font1);
+  cursor: pointer;
+  padding: 0.125em;
+  transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
-nav a:hover {
+@media (hover: hover) {
+  a.link:hover,
+  button.link:hover {
     color: var(--withe_color);
+  }
 }
 
+button.link {
+  border: none;
+  color: var(--black_color);
+  background: var(--brown_color);
+  font-size: 1.5rem;
+  font-family: var(--my_font2);
+  border-radius: 15px;
+  margin: 0;
+  padding: 0.25em 0.75em;
+}
+
+.dropdown {
+  position: relative;
+  z-index: 100;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.dropdown-menu {
+  max-height: 85vh;
+  overflow: auto;
+  position: absolute;
+  top: 3.75em;
+  background: var(--black_color);
+  padding: 1.25em;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: 50ms ease-in-out 50ms;
+}
+
+.position_right {
+  right: -0.75rem;
+  min-width: 100vw;
+  max-width: 100vw;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  text-align: center;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+  transform: scale(1, 1);
+  transition: 200ms ease-in-out 50ms;
+}
+
+.grid-menu {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.border {
+  border: var(--brown_color) solid 1px;
+  border-radius: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.75em;
+  min-height: 12em;
+  background: var(--brown_color);
+  color: var(--black_color);
+}
+
+.cover {
+  background: linear-gradient(
+      to top,
+      rgba(114, 112, 112, 0.555),
+      rgba(75, 74, 74, 0.555),
+      rgba(51, 50, 50, 0.555)
+    ),
+    url(../images/bg_main33.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+h1 {
+  max-width: 75%;
+  font-family: var(--my_font2);
+  font-size: 2.75rem;
+  padding: 0 0.5em;
+  line-height: 2.5;
+  color: var(--brown_color);
+  text-shadow: -3px 2px 1px var(--withe_color);
+  letter-spacing: 10px;
+  text-align: center;
+  height: 75vh;
+  margin: 1.75em auto 0 auto;
+}
 
 /* main settings */
 
 
-input {
-    all: unset;
-}
 
-form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background: var(--grey_color);
-    color: var(--black_color);
-    border: 1px solid black;
-    max-width: 40em;
-    margin: 1.5em auto;
-    border-radius: 2em;
-    padding: 1.5em;
-}
 
-.form_input {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* border: solid 1px red; */
-    padding: 0.25em 1em;
-}
 
-.form_button{
-    background: rgb(125, 47, 226);
-    color: white;
-    padding: 0.5em 2em;
-    margin: 1em auto;
-    border-radius: 1em;
-    width: 90%;
-    box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.38);
-}
-
-.mail,
-.phone {
-    width: 90%;
-    background: white;
-    margin: 1em auto;
-    border-radius: 1em;
-    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
-}
-
-.password {
-    width: 90%;
-    background: white;
-    margin: 0 auto 1em;
-    border-radius: 1em;
-    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
-}
-
-.first-name,
-.last-name {
-    width: 48%;
-    background: white;
-    border-radius: 1em;
-    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
-}
-
-.flex {
-display: flex;
-width: 90%;
-justify-content: space-between;
-}
 
 
 /* footer settings */
 
 footer {
-    margin: 0;
-    padding: 2.5em 1.5em 1.5em 1.5em;
-    background: var(--blue_color);
+  margin: 0;
+  padding: 2.5em 1.5em 1.5em 1.5em;
+  background: var(--withe_color);
+  border-top: var(--black_color) dashed 4px;
+  text-align: center;
 }
 
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+footer li {
+padding: 0.25em 0.75em;
+margin: 0.5em 0;
+background: var(--brown_color);
+border-radius: 15px;
+}
 
 footer a {
-    color: black;
-    padding: 0 1em;
-    text-decoration: none;
-    font-weight: 600;
+  color: black;
+  background: var(--brown_color);
+  text-decoration: none;
 }
 
-footer a:hover {
+@media (hover: hover) {
+  footer a:hover {
     color: var(--withe_color);
+  }
 }
 
 footer p {
-    padding: 1em;
-    text-align: center;
+  padding: 1em;
+  margin: 0.5em auto;
+  text-align: center;
+  background: var(--brown_color);
+  border-radius: 15px;
+  max-width: 350px;
 }
 
 /* media queries */
 
-@media (min-width:650px) {
+@media (min-width: 650px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  button.link {
+    font-size: 2rem;
+  }
+
+  .dropdown-menu {
+    top: 3.75em;
+  }
+
+  .tytle {
+    font-size: 3rem;
+  }
 
 
-    nav a {
-        font-size: 1.85rem
-    }
+  footer ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+  }
+}
 
+@media (min-width: 950px) {
+  h1 {
+    font-size: 3.75rem;
+  }
 
-    p,
-    footer a,
-    footer p {
-        font-size: 1.35rem;
-    }
+  button.link {
+    font-size: 2.25rem;
+  }
 
+  .dropdown-menu {
+    top: 4em;
+  }
 
-
+ 
 }

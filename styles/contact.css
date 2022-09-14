@@ -11,17 +11,22 @@
   src: url("../fonts/trashimclm-bold-webfont.woff");
 }
 
+@font-face {
+  font-family: "Shmulik";
+  src: url("../fonts/ShmulikCLM.woff");
+}
+
 /* my costum properties */
 
 :root {
   --blue_color: rgb(34, 217, 102);
   --withe_color: rgb(255, 255, 255);
   --grey_color: rgb(240, 240, 240);
-  --black_color: #080808;
+  --black_color: hsl(0, 0%, 3%);
   --brown_color: rgb(244, 196, 6);
 
   --my_font1: "trashim", cursive;
-  --my_font2: "Karantina", cursive;
+  --my_font2: "Shmulik", cursive;
 }
 
 /* general */
@@ -32,7 +37,6 @@ html {
 
 body {
   font-family: var(--my_font2);
-  font-weight: 300;
   letter-spacing: 3px;
   font-size: 20px;
   line-height: 1.6;
@@ -46,7 +50,6 @@ img {
 .tytle {
   font-size: 2.125rem;
   font-family: var(--my_font1);
-  font-weight: 700;
   padding: 0.5em;
   text-align: center;
 }
@@ -54,8 +57,9 @@ img {
 .sub_tytle {
   text-align: center;
   font-size: 2rem;
+  font-family: var(--my_font1);
+  color: var(--brown_color);
   margin-bottom: 1em;
-  font-weight: 400;
 }
 
 .p_style {
@@ -68,15 +72,14 @@ img {
 button {
   padding: 0.75em 1.5em;
   margin: 1em auto;
-  font-weight: 700;
 }
 
 /* header settings */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
-  background: var(--withe_color);
+  z-index: 1;
 }
 
 /* change the background color*/
@@ -94,8 +97,8 @@ nav {
 }
 
 .dropdown-heading {
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-family: var(--my_font2);
+  font-size: 1.75rem;
   padding: 0.75em;
 }
 
@@ -105,34 +108,34 @@ nav {
   text-decoration: none;
   color: var(--black_color);
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-family: var(--my_font1);
   cursor: pointer;
   padding: 0.125em;
   transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
 @media (hover: hover) {
-  .link:hover {
-    color: var(--black_color);
-  }
-  a.link:hover {
-    color: var(--withe_color);
-  }
+  a.link:hover,
   button.link:hover {
-    color: var(--black_color);
+    color: var(--withe_color);
   }
 }
 
 button.link {
   border: none;
-  font-weight: 700;
-  color: var(--brown_color);
+  color: var(--black_color);
+  background: var(--brown_color);
   font-size: 1.5rem;
-  font-family: var(--my_font1);
+  font-family: var(--my_font2);
+  border-radius: 15px;
+  margin: 0;
+  padding: 0.25em 0.75em;
 }
 
 .dropdown {
   position: relative;
+  z-index: 100;
 }
 
 .left {
@@ -143,7 +146,7 @@ button.link {
   max-height: 85vh;
   overflow: auto;
   position: absolute;
-  top: 2.5em;
+  top: 3.75em;
   background: var(--black_color);
   padding: 1.25em;
   border-radius: 30px;
@@ -188,6 +191,42 @@ button.link {
   background: var(--brown_color);
   color: var(--black_color);
 }
+
+.cover {
+  background: linear-gradient(
+      to top,
+      rgba(114, 112, 112, 0.555),
+      rgba(75, 74, 74, 0.555),
+      rgba(51, 50, 50, 0.555)
+    ),
+    url(../images/bg_main33.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+h1 {
+  max-width: 75%;
+  font-family: var(--my_font2);
+  font-size: 2.75rem;
+  padding: 0 0.5em;
+  line-height: 2.5;
+  color: var(--brown_color);
+  text-shadow: -3px 2px 1px var(--withe_color);
+  letter-spacing: 10px;
+  text-align: center;
+  height: 75vh;
+  margin: 1.75em auto 0 auto;
+}
+
+
+
+/* main settings */
 
 /* style the mail-cheep form */
 
@@ -246,12 +285,16 @@ input {
   min-height: 7vh;
 }
 
+
+
+
+
 /* footer settings */
 
 footer {
   margin: 0;
   padding: 2.5em 1.5em 1.5em 1.5em;
-  background: var(--brown_color);
+  background: var(--withe_color);
   border-top: var(--black_color) dashed 4px;
   text-align: center;
 }
@@ -264,13 +307,20 @@ footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  
+}
+
+footer li {
+padding: 0.25em 0.75em;
+margin: 0.5em 0;
+background: var(--brown_color);
+border-radius: 15px;
 }
 
 footer a {
   color: black;
-  padding: 0 1em;
+  background: var(--brown_color);
   text-decoration: none;
-  font-weight: 400;
 }
 
 @media (hover: hover) {
@@ -281,13 +331,20 @@ footer a {
 
 footer p {
   padding: 1em;
-  margin: 0;
+  margin: 0.5em auto;
   text-align: center;
+  background: var(--brown_color);
+  border-radius: 15px;
+  max-width: 350px;
 }
 
 /* media queries */
 
 @media (min-width: 650px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
   button.link {
     font-size: 2rem;
   }
@@ -300,6 +357,7 @@ footer p {
     font-size: 3rem;
   }
 
+
   footer ul {
     flex-direction: row;
     justify-content: center;
@@ -308,6 +366,10 @@ footer p {
 }
 
 @media (min-width: 950px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+
   button.link {
     font-size: 2.25rem;
   }
@@ -315,4 +377,6 @@ footer p {
   .dropdown-menu {
     top: 4em;
   }
+
+ 
 }
