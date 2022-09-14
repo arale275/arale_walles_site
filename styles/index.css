@@ -22,8 +22,8 @@
   --blue_color: rgb(34, 217, 102);
   --withe_color: rgb(255, 255, 255);
   --grey_color: rgb(240, 240, 240);
-  --black_color: hsl(0, 0%, 3%);
-  --brown_color: rgb(244, 196, 6);
+  --black_color: #080808;
+  --brown_color: #f4c406;
 
   --my_font1: "trashim", cursive;
   --my_font2: "Shmulik", cursive;
@@ -325,6 +325,10 @@ button a {
 button a:active,
 button a:focus {
   all: unset;
+}
+
+button a:hover {
+  color: var(--withe_color);
 }
 
 
