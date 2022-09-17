@@ -197,13 +197,7 @@ button.link {
 }
 
 .cover {
-  background: linear-gradient(
-      to top,
-      rgba(92, 49, 78, 0.555),
-      rgba(75, 74, 74, 0.555),
-      rgba(204, 147, 73, 0.555)
-    ),
-    url(../images/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
+  background: url(https://aralePull.b-cdn.net/dmitry-chernyshov-mP7aPSUm7aE-unsplash.jpg);
   background-size: cover;
   background-position: top;
   position: fixed;

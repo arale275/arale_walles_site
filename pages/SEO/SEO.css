@@ -197,13 +197,7 @@ button.link {
 }
 
 .cover {
-  background: /* linear-gradient(
-      to top,
-      rgba(114, 112, 112, 0.555),
-      rgba(75, 74, 74, 0.555),
-      rgba(51, 50, 50, 0.555)
-    ), */
-    url(/images/build1.jpg);
+  background: url(https://aralePull.b-cdn.net/ricardo-gomez-angel-zaxoaZVazCs-unsplash.jpg);
   background-size: cover;
   background-position: center top;
   position: fixed;

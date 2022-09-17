@@ -199,13 +199,7 @@ button.link {
 }
 
 .cover {
-  background: linear-gradient(
-    to top,
-    rgba(82, 50, 38, 0.582),
-    rgba(51, 30, 50, 0.555),
-    rgba(64, 65, 43, 0.644)
-  ),
-    url(../images/joyce-mccown-tPEG_yR2a2o-unsplash.jpg);
+  background: url(https://aralePull.b-cdn.net/peter-hammer-ggQy5lGtwb0-unsplash.jpg);
   background-size: cover;
   background-position: right;
   position: fixed;

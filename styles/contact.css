@@ -197,13 +197,7 @@ button.link {
 }
 
 .cover {
-  background: linear-gradient(
-      to top,
-      rgba(88, 96, 121, 0.925),
-      rgba(34, 32, 70, 0.555),
-      rgba(97, 168, 162, 0.507)
-    ),
-    url(../images/vlad-hilitanu-1FI2QAYPa-Y-unsplash.jpg);
+  background: url(https://aralePull.b-cdn.net/road-trip-with-raj-o4c2zoVhjSw-unsplash.jpg);
   background-size: cover;
   background-position: center ;
   position: fixed;

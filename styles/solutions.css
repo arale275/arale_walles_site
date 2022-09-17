@@ -197,13 +197,7 @@ button.link {
 }
 
 .cover {
-  background: /* linear-gradient(
-      to top,
-      rgba(114, 112, 112, 0.555),
-      rgba(75, 74, 74, 0.555),
-      rgba(51, 50, 50, 0.555)
-    ), */
-    url(../images/jeshoots-com-fzOITuS1DIQ-unsplash.jpg);
+  background: url(https://aralePull.b-cdn.net/daniel-frank-YSl18VKXRso-unsplash.jpg);
   background-size: cover;
   background-position: center top;
   position: fixed;
