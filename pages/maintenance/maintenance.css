@@ -22,8 +22,8 @@
   --blue_color: rgb(34, 217, 102);
   --withe_color: rgb(255, 255, 255);
   --grey_color: rgb(240, 240, 240);
-  --black_color: #080808;
-  --brown_color: #f4c406;
+  --black_color: hsl(0, 0%, 3%);
+  --brown_color: rgb(244, 196, 6);
 
   --my_font1: "trashim", cursive;
   --my_font2: "Shmulik", cursive;
@@ -197,15 +197,15 @@ button.link {
 }
 
 .cover {
-  background: linear-gradient(
-    to top,
-    rgba(82, 50, 38, 0.582),
-    rgba(51, 30, 50, 0.555),
-    rgba(64, 65, 43, 0.644)
-  ),
-    url(../images/joyce-mccown-tPEG_yR2a2o-unsplash.jpg);
+  background: /* linear-gradient(
+      to top,
+      rgba(114, 112, 112, 0.555),
+      rgba(75, 74, 74, 0.555),
+      rgba(51, 50, 50, 0.555)
+    ), */
+    url(/images/build1.jpg);
   background-size: cover;
-  background-position: right;
+  background-position: center top;
   position: fixed;
   top: 0;
   left: 0;
@@ -229,111 +229,11 @@ h1 {
 }
 
 /* main settings */
-/* section 2 */
 
-.build_sites_bg {
-  background: linear-gradient(
-    180deg,
-    hsla(0, 0%, 3%, 1) 50%,
-    hsla(0, 0%, 100%, 0.75) 50%
-  );
-  color: var(--withe_color);
 
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr;
 
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
 
-  min-height: 70vh;
-}
 
-.build_sites {
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.build_sites > img {
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-/* section 3 */
-.diy_bg {
-  background: linear-gradient(
-    180deg,
-    hsla(48, 95%, 49%, 1) 50%,
-    hsla(0, 0%, 100%, 0.75) 50%
-  );
-  color: var(--black_color);
-
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr;
-
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-
-  min-height: 75vh;
-}
-
-.diy {
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.diy > img {
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.diy .sub_tytle {
-  color: var(--withe_color);
-}
-
-.go_travel_site {
-  min-height: 80vh;
-  background: hsl(0, 0%, 3%, 0.75);
-  color: var(--withe_color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1em;
-  text-align: center;
-}
-
-.go_travel_site h2 {
- color: var(--brown_color);
-}
-
-.buttons {
-display: flex;
-flex-direction: column;
-min-height: 5em;
-justify-content: space-between ;
-}
-
-button a {
-  text-decoration: none;
-  color: var(--black_color);
-}
-
-button a:active,
-button a:focus {
-  all: unset;
-}
-
-button a:hover {
-  color: var(--withe_color);
-}
 
 
 /* footer settings */
@@ -404,9 +304,6 @@ footer p {
     font-size: 3rem;
   }
 
-  .buttons {
-    min-height: 7em;
-  }
 
   footer ul {
     flex-direction: row;
@@ -428,45 +325,5 @@ footer p {
     top: 4em;
   }
 
-  .build_sites_bg {
-    background: linear-gradient(
-      270deg,
-      hsla(0, 0%, 3%, 1) 50%,
-      hsla(0, 0%, 100%, 0.75) 50%
-    );
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    min-height: 75vh;
-  }
-
-  .build_sites {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  .build_sites > img {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  .diy_bg {
-    background: linear-gradient(
-      90deg,
-      hsla(48, 95%, 49%, 1) 50%,
-      hsla(0, 0%, 100%, 0.75) 50%
-    );
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    min-height: 75vh;
-  }
-
-  .diy {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  .diy img {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
+ 
 }
