@@ -83,11 +83,11 @@ let wordflick = function () {
         offset--;
       }
     }
-    jquery('.word').text(part);
+    jQuery('.word').text(part);
   },speed);
 };
 
-jquery(document).ready(function () {
+jQuery(document).ready(function () {
   wordflick();
 });
 
