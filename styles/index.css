@@ -222,29 +222,13 @@ button.link {
   line-height: 2.5;
   color: var(--brown_color);
   background: hsl(0, 0%, 3%, 0.75);
-  text-shadow: -10px 10px 15px var(--black_color);
   letter-spacing: 10px;
   text-align: center;
   border-radius: 30px;
-  height: 50vh;
+  min-height: 50vh;
   margin: 2.5em auto 0 auto;
 }
 
-/* h1 {
-  max-width: 75%;
-  font-family: var(--my_font2);
-  font-size: 2.75rem;
-  padding: 0.5em;
-  line-height: 2.5;
-  color: var(--brown_color);
-  background: hsl(0, 0%, 3%, 0.75);
-  text-shadow: -10px 10px 15px var(--black_color);
-  letter-spacing: 10px;
-  text-align: center;
-  text-align: right;
-  border-radius: 30px;
-  margin: 2.5em auto 0 auto;
-} */
 
 /* main settings */
 /* section 2 */
