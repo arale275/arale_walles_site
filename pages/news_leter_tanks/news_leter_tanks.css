@@ -1,0 +1,153 @@
+/* reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "trashim";
+  src: url("/fonts/trashimclm-bold-webfont.woff");
+}
+
+@font-face {
+  font-family: "Shmulik";
+  src: url("/fonts/ShmulikCLM.woff");
+}
+
+/* my costum properties */
+
+:root {
+  --blue_color: rgb(34, 217, 102);
+  --withe_color: rgb(255, 255, 255);
+  --grey_color: rgb(240, 240, 240);
+  --black_color: hsl(0, 0%, 3%);
+  --brown_color: rgb(244, 196, 6);
+
+  --my_font1: "trashim", cursive;
+  --my_font2: "Shmulik", cursive;
+}
+
+/* general */
+
+html {
+  direction: rtl;
+}
+
+body {
+  font-family: var(--my_font2);
+  letter-spacing: 3px;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+button {
+  padding: 0.75em 1.5em;
+  margin: 1em auto;
+  background: var(--black_color);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: var(--my_font1);
+}
+
+a {
+text-decoration: none;
+color: var(--brown_color);
+}
+
+.p_style {
+  font-size: 1.75rem;
+  padding: 1em;
+  max-width: 50ch;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+
+h1 {
+  max-width: 75%;
+  font-family: var(--my_font1);
+  font-size: 2.75rem;
+  padding: 0.5em;
+  line-height: 2.5;
+  color: var(--brown_color);
+  background: var(--black_color);
+  letter-spacing: 10px;
+  text-align: center;
+  margin: 2.5em auto 0 auto;
+  border-radius: 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* main settings */
+
+
+
+
+
+
+
+/* footer settings */
+
+footer {
+  margin: 0;
+  padding: 2.5em 1.5em 1.5em 1.5em;
+  background: var(--withe_color);
+  border-top: var(--black_color) dashed 4px;
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+footer li {
+padding: 0.25em 0.75em;
+margin: 0.5em 0;
+background: var(--brown_color);
+border-radius: 15px;
+}
+
+footer a {
+  color: black;
+  background: var(--brown_color);
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  footer a:hover {
+    color: var(--withe_color);
+  }
+}
+
+footer p {
+  padding: 1em;
+  margin: 0.5em auto;
+  text-align: center;
+  background: var(--brown_color);
+  border-radius: 15px;
+  max-width: 350px;
+}
+
+
