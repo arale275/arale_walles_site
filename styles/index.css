@@ -199,30 +199,52 @@ button.link {
 }
 
 .cover {
-  background: url(https://aralePull.b-cdn.net/peter-hammer-ggQy5lGtwb0-unsplash.jpg);
+  background: url(/images/vlad-hilitanu-1FI2QAYPa-Y-unsplash.jpg);
   background-size: cover;
   background-position: right;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   height: 100vh;
   z-index: -1;
 }
 
-h1 {
+
+.word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 75%;
   font-family: var(--my_font2);
   font-size: 2.75rem;
-  padding: 0;
+  padding: 0.5em;
   line-height: 2.5;
   color: var(--brown_color);
+  background: hsl(0, 0%, 3%, 0.75);
   text-shadow: -10px 10px 15px var(--black_color);
   letter-spacing: 10px;
   text-align: center;
-  height: 75vh;
+  border-radius: 30px;
+  height: 50vh;
   margin: 2.5em auto 0 auto;
 }
+
+/* h1 {
+  max-width: 75%;
+  font-family: var(--my_font2);
+  font-size: 2.75rem;
+  padding: 0.5em;
+  line-height: 2.5;
+  color: var(--brown_color);
+  background: hsl(0, 0%, 3%, 0.75);
+  text-shadow: -10px 10px 15px var(--black_color);
+  letter-spacing: 10px;
+  text-align: center;
+  text-align: right;
+  border-radius: 30px;
+  margin: 2.5em auto 0 auto;
+} */
 
 /* main settings */
 /* section 2 */

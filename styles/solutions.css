@@ -197,15 +197,16 @@ button.link {
 }
 
 .cover {
-  background: url(https://aralePull.b-cdn.net/daniel-frank-YSl18VKXRso-unsplash.jpg);
+  background: url(/images/our_products.jpg);
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 100vh;
   z-index: -1;
+  overflow: hidden;
 }
 
 h1 {
