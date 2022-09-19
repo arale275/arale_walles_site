@@ -193,7 +193,7 @@ button.link {
 }
 
 .cover {
-  background: url(/images/ahmad-elsafty-x97saLWeMNI-unsplash.jpg);
+  background: url(/images/fletcher-pride-liMvhbUq4Xg-unsplash.jpg);
   background-size: cover;
   background-position: center center;
   position: fixed;
@@ -229,8 +229,8 @@ h1 {
 
 /* main settings */
 .container {
-  padding: 5%;
-  background: var(--black_color);
+  /* padding: 5%; */
+  background: silver;
   font-family: var(--my_font1);
 }
 
@@ -238,12 +238,13 @@ h1 {
   min-height: 75vh;
   background-size: cover;
   background-position: center;
-  scale: 0.9;
-  border: solid 1px black;
+  scale: 0.95;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  border-radius: 1em;
+  box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
 .swiper-slide .p_style {

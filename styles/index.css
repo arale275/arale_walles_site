@@ -199,9 +199,9 @@ button.link {
 }
 
 .cover {
-  background: url(/images/vlad-hilitanu-1FI2QAYPa-Y-unsplash.jpg);
+  background: url(/images/copernico-cLmOptqvuFQ-unsplash.jpg);
   background-size: cover;
-  background-position: right;
+  background-position: left center;
   position: fixed;
   top: 0;
   right: 0;

@@ -197,9 +197,9 @@ button.link {
 }
 
 .cover {
-  background: url(/images/jeshoots-com-fzOITuS1DIQ-unsplash.jpg);
+  background: url(/images/randy-fath-ymf4_9Y9S_A-unsplash.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -215,6 +215,7 @@ button.link {
   align-items: center;
   margin-top: 2.5em;
   font-size: 2.5rem;
+  min-height: 75vh;
 }
 
 .ul_animated {
