@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "trashim";
-  src: url("/fonts/ShmulikCLM.woff");
+  src: url("/fonts/trashimclm-bold-webfont.woff");
 }
 
 @font-face {
@@ -63,7 +63,7 @@ img {
 }
 
 .p_style {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   padding: 1em;
   max-width: 60ch;
   margin: 0 auto;
@@ -79,7 +79,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 
 /* change the background color*/
@@ -100,10 +100,6 @@ nav {
   font-family: var(--my_font2);
   font-size: 1.75rem;
   padding: 0.75em;
-}
-
-.dropdown-heading span {
-  color: red;
 }
 
 .link {
@@ -140,10 +136,6 @@ button.link {
 .dropdown {
   position: relative;
   z-index: 100;
-}
-
-.left {
-  margin-right: auto;
 }
 
 .dropdown-menu {
@@ -197,7 +189,7 @@ button.link {
 }
 
 .cover {
-  background: url(/images/our_products.jpg);
+  background: url(/images/ahmad-elsafty-x97saLWeMNI-unsplash.jpg);
   background-size: cover;
   background-position: center center;
   position: fixed;
@@ -207,28 +199,62 @@ button.link {
   height: 100vh;
   z-index: -1;
   overflow: hidden;
+  
+}
+
+.change_bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
 }
 
 h1 {
-  max-width: 75%;
   font-family: var(--my_font2);
-  font-size: 2.75rem;
-  padding: 0;
+  font-size: 2.35rem;
+  padding: 0.25em;
   line-height: 2.5;
   color: var(--brown_color);
-  text-shadow: -10px 10px 15px var(--black_color);
   letter-spacing: 10px;
   text-align: center;
-  height: 75vh;
-  margin: 2.5em auto 0 auto;
+  margin: 0;
+  background: var(--black_color);
+  border-radius: 50px;
 }
 
+
 /* main settings */
+.container {
+  padding: 5%;
+  background: var(--black_color);
+  font-family: var(--my_font1);
+}
 
+.swiper-slide {
+  min-height: 75vh;
+  background-size: cover;
+  background-position: center;
+  scale: 0.9;
+  border: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
+.swiper-slide .p_style {
+  background: var(--brown_color);
+  max-width: 65%;
+  margin: 0;
+  padding: 5px;
+  font-size: 1.35rem;
+  border-radius: 15px;
+}
 
-
-
+p span {
+  text-decoration: underline;
+  text-decoration-color: #007aff  ;
+}
 
 
 /* footer settings */
@@ -249,14 +275,13 @@ footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  
 }
 
 footer li {
-padding: 0.25em 0.75em;
-margin: 0.5em 0;
-background: var(--brown_color);
-border-radius: 15px;
+  padding: 0.25em 0.75em;
+  margin: 0.5em 0;
+  background: var(--brown_color);
+  border-radius: 15px;
 }
 
 footer a {
@@ -299,6 +324,10 @@ footer p {
     font-size: 3rem;
   }
 
+  .swiper-slide .p_style {
+    font-size: 2rem;
+    padding: 0.5em;
+  }
 
   footer ul {
     flex-direction: row;
@@ -320,5 +349,8 @@ footer p {
     top: 4em;
   }
 
- 
+  .swiper-slide .p_style {
+    font-size: 2.25rem;
+    padding: 0.75em;
+  }
 }
