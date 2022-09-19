@@ -9,11 +9,13 @@
 @font-face {
   font-family: "trashim";
   src: url("/fonts/trashimclm-bold-webfont.woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Shmulik";
   src: url("/fonts/ShmulikCLM.woff");
+  font-display: swap;
 }
 
 /* my costum properties */
