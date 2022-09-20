@@ -72,9 +72,6 @@ color: var(--brown_color);
 }
 
 .logo {
-  background-image: url(/images/avs\ \(1\).png);
-  background-size: cover;
-  background-position: center;
   height: 125px;
   width: 125px;
   margin-top: 1em;
