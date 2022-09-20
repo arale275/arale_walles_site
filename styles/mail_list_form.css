@@ -151,6 +151,7 @@ button.link {
 .dropdown {
   position: relative;
   z-index: 110;
+  max-width: 70%;
 }
 
 .left {
