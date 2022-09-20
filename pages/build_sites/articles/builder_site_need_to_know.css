@@ -97,6 +97,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem;
+  background: hsl(0, 0%, 3%, 0.85);
 }
 
 .logo {
@@ -135,18 +136,18 @@ nav {
 }
 
 button.link {
-  border: none;
-  color: var(--black_color);
-  background: var(--brown_color);
-  font-size: 1.5rem;
-  font-family: var(--my_font2);
-  border-radius: 15px;
-  margin: 0 auto 0 auto;
-  padding: 0.25em 0.75em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    border: none;
+    color: var(--black_color);
+    background: var(--brown_color);
+    font-size: 1.5rem;
+    font-family: var(--my_font2);
+    border-radius: 15px;
+    margin: 1.5em auto;
+    padding: 0.25em 0.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 .dropdown {
   position: relative;
@@ -208,8 +209,7 @@ button.link {
 }
 
 .cover {
-  background: 
-    url(/images/build1.jpg);
+  background: url(/images/build1.jpg);
   background-size: cover;
   background-position: center top;
   position: fixed;
@@ -218,57 +218,35 @@ button.link {
   right: 0;
   height: 100vh;
   z-index: -1;
-  overflow: hidden;
-  
-}
-
-.change_bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 h1 {
+  max-width: 75%;
   font-family: var(--my_font2);
-  font-size: 2.35rem;
-  padding: 0.25em;
+  font-size: 2.75rem;
+  padding: 0;
   line-height: 2.5;
   color: var(--brown_color);
+  text-shadow: -10px 10px 15px var(--black_color);
   letter-spacing: 10px;
   text-align: center;
-  margin: 0;
-  background: hsl(0, 0%, 3%, 0.75);;
-  border-radius: 50px;
+  /* height: 75vh; */
+  margin: 2.5em auto 0 auto;
 }
 
 /* main settings */
 
-.container {
-  background: var(--withe_color);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
 article {
-  max-width: 60ch;
-  margin: 2em 1em;
-  padding: 0.75em;
-  border: 1px solid var(--black_color);
-}
+    max-width: 60ch;
+    padding: 0.75em;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-article h2 {
-  text-align: center;
-}
-
-.list_item {
-  list-style: decimal;
-}
-
-button a {
-  color: var(--black_color);
-  text-decoration: none;
-}
+  button a {
+    color: var(--black_color);
+    text-decoration: none;
+  }
 
 
 
@@ -326,18 +304,17 @@ footer p {
 @media (min-width: 650px) {
 
   .logo {
-    width: 125px;
     height: 125px;
+    width: 125px;
   }
-
   
   h1 {
     font-size: 3.25rem;
   }
 
-  /* button.link {
+  button.link {
     font-size: 2rem;
-  } */
+  }
 
   .dropdown-menu {
     top: 3.75em;
@@ -359,10 +336,6 @@ footer p {
   h1 {
     font-size: 3.75rem;
   }
-
-  /* button.link {
-    font-size: 2.25rem;
-  } */
 
   .dropdown-menu {
     top: 4em;
