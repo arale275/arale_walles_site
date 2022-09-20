@@ -98,6 +98,14 @@ nav {
   padding: 0.75rem;
 }
 
+.logo {
+  background-image: url(/images/avs\ \(1\).png);
+  background-size: cover;
+  background-position: center;
+  height: 75px;
+  width: 75px;
+}
+
 .dropdown-heading {
   font-family: var(--my_font2);
   font-size: 1.75rem;
@@ -284,6 +292,12 @@ footer p {
 /* media queries */
 
 @media (min-width: 650px) {
+
+  .logo {
+    height: 125px;
+    width: 125px;
+  }
+  
   h1 {
     font-size: 3.25rem;
   }
