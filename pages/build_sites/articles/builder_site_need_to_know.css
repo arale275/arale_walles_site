@@ -248,7 +248,11 @@ article {
     text-decoration: none;
   }
 
-
+  @media (hover: hover) {
+    button a:hover {
+      color: var(--withe_color);
+    }
+  }
 
 /* footer settings */
 

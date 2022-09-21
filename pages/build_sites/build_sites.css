@@ -247,18 +247,38 @@ h1 {
 .container {
   background: var(--withe_color);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  
+  justify-content: center;
+  
+  grid-template-columns: repeat(auto-fill, minmax(48vw, 60ch));
+  
+  margin-bottom: 25vh;
+  gap: 2em;
 }
 
 article {
   max-width: 60ch;
-  margin: 2em 1em;
-  padding: 0.75em;
-  border: 1px solid var(--black_color);
+  margin: 0 auto;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--black_color) 3px dashed;
+  border-top: var(--black_color) 3px dashed;
+  min-height: 75vh;
 }
 
 article h2 {
   text-align: center;
+}
+
+article ul {
+  margin-bottom: auto;
+  padding-bottom: 1em;
+}
+
+article p {
+  text-align: center;
+  margin-bottom: auto;
 }
 
 .list_item {
@@ -270,7 +290,11 @@ button a {
   text-decoration: none;
 }
 
-
+@media (hover: hover) {
+  button a:hover {
+    color: var(--withe_color);
+  }
+}
 
 /* footer settings */
 
