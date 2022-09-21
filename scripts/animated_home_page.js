@@ -1,40 +1,58 @@
-let aText = new Array(
-    "ברוכים הבאים!!!",
-    "\n",
-    " צריכים אתר שיגדיל לכם את ההכנסות ?",
-    "\n", 
-    "הגעתם למקום הנכון!!!"
-    );
-    let iSpeed = 75; // time delay of print out
-    let iIndex = 0; // start printing array at this posision
-    let iArrLength = aText[0].length; // the length of the text array
-    let iScrollAt = 20; // start scrolling up at this many lines
-     
-    let iTextPos = 0; // initialise text position
-    let sContents = ''; // initialise contents variable
-    let iRow; // initialise current row
-     
-    function typewriter()
-    {
-     sContents =  ' ';
-     iRow = Math.max(0, iIndex-iScrollAt);
-     let destination = document.getElementById("typedtext");
-     
-     while ( iRow < iIndex ) {
-      sContents += aText[iRow++] + '<br />';
-     }
-     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) /* + "|" */;
-     if ( iTextPos++ == iArrLength ) {
-      iTextPos = 0;
-      iIndex++;
-      if ( iIndex != aText.length ) {
-       iArrLength = aText[iIndex].length;
-       setTimeout("typewriter()", 500);
-      }
-     } else {
-      setTimeout("typewriter()", iSpeed);
-     }
-    }
+
+  /*   `מבינים,  מנתחים,  מגדירים,
+
+    מציעים,  מחליטים,  מיישמים,
     
+    מקשיבים,  מגיבים,  מעדכנים...
+
+   ברוכים הבאים ל AVS` */
     
-    typewriter();
+   new TypeIt("#main_animation", {
+    speed: 100,
+    cursor: false,
+  })
+    .type("מבינים", { delay: 100 })
+    .break()
+    .type("מנתחים", { delay: 100 })
+    .break()
+    .type("מגדירים", { delay: 100 })
+    .break()
+    .type("מציעים", { delay: 100 })
+    .break()
+    .type("מחליטים", { delay: 100 })
+    .break()
+    .type("מיישמים", { delay: 100 })
+    .break()
+    .type("מקשיבים", { delay: 100 })
+    .break()
+    .type("מגיבים", { delay: 100 })
+    .break()
+    .type("מעדכנים", { delay: 100 })
+    .break()
+    .break()
+    .type("ברוכים הבאים ל AVS", { delay: 100 })
+
+    /* .move(-8, { delay: 100 })
+    .type("s", { delay: 400 })
+  
+    .move(null, { to: "START", instant: false, delay: 300 })
+    .move(1, { delay: 200 })
+    .delete(1)
+    .type("T", { delay: 225 })
+    .pause(200)
+    .move(2, { instant: true })
+    .pause(200)
+    .move(5, { instant: true })
+    .move(5, { delay: 200 })
+    .type("a", { delay: 350 })
+    .move(null, { to: "END" })
+    .type("le typing utlity")
+    .move(-4, { delay: 150 })
+    .type("i")
+    .move(null, { to: "END" })
+    .type(' on the <span class="place">internet</span>', { delay: 400 })
+    .delete(".place", { delay: 800, instant: true })
+    .type('<em><strong class="font-semibold">planet.</strong></em>', {
+      speed: 100,
+    }) */
+    .go();
