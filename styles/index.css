@@ -223,10 +223,12 @@ button.link {
   justify-items: center;
   align-items: center;
   text-align: center;
-  background: hsl(0, 0%, 3%, 0.65);
+  background: hsl(0, 0%, 3%, 0.5);
   color: var(--brown_color);
   font-size: 2rem;
   margin: 3em auto;
+  max-height: max-content;
+  max-width: max-content;
 }
 
 
