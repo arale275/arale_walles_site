@@ -18,6 +18,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "stencilla";
+  src: url(/fonts/stencilla.woff);
+  font-display: swap;
+}
+
 /* my costum properties */
 
 :root {
@@ -29,6 +35,7 @@
 
   --my_font1: "trashim", cursive;
   --my_font2: "Shmulik", cursive;
+  --my_font3: "stencilla", cursive;
 }
 
 /* general */
@@ -223,7 +230,7 @@ button.link {
   justify-items: center;
   align-items: center;
   text-align: center;
-  background: hsl(0, 0%, 3%, 0.5);
+  background: hsl(0, 0%, 3%, 0.8);
   color: var(--brown_color);
   font-size: 2rem;
   margin: 3em auto;
@@ -231,6 +238,9 @@ button.link {
   max-width: max-content;
 }
 
+.font {
+  font-family: var(--my_font3);
+}
 
 
 /* main settings */

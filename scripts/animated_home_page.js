@@ -30,7 +30,9 @@
     .type("מעדכנים", { delay: 100 })
     .break()
     .break()
-    .type("ברוכים הבאים ל AVS", { delay: 100 })
+    .type("ברוכים הבאים ל - ", { delay: 100 })
+    .type('<span class="font">AVS</span>', { delay: 100 })
+    
 
     /* .move(-8, { delay: 100 })
     .type("s", { delay: 400 })
