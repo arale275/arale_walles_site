@@ -239,6 +239,7 @@ h1 {
   /* padding: 5%; */
   background: silver;
   font-family: var(--my_font1);
+  display: flex;
 }
 
 .swiper-slide {
@@ -267,6 +268,25 @@ p span {
   text-decoration: underline;
   text-decoration-color: #007aff  ;
 }
+
+.contact_button {
+display: flex;
+justify-content: center;
+}
+
+  button a {
+    text-decoration: none;
+    color: var(--black_color);
+  }
+  
+  button a:active,
+  button a:focus {
+    all: unset;
+  }
+  
+  button a:hover {
+    color: var(--withe_color);
+  }
 
 
 /* footer settings */
