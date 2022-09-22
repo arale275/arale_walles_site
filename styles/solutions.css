@@ -18,6 +18,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "stencilla";
+  src: url(/fonts/stencilla.woff);
+  font-display: swap;
+}
+
 /* my costum properties */
 
 :root {
@@ -29,6 +35,7 @@
 
   --my_font1: "trashim", cursive;
   --my_font2: "Shmulik", cursive;
+  --my_font3: "stencilla", cursive;
 }
 
 /* general */
@@ -201,7 +208,7 @@ button.link {
 }
 
 .cover {
-  background: url(/images/fletcher-pride-liMvhbUq4Xg-unsplash.jpg);
+  background: url(/images/adam-winger-OpV94f2edwE-unsplash.jpg);
   background-size: cover;
   background-position: center center;
   position: fixed;
@@ -236,8 +243,8 @@ h1 {
 
 /* main settings */
 .container {
-  /* padding: 5%; */
-  background: silver;
+  padding: 2.5%;
+  background: var(--brown_color);
   font-family: var(--my_font1);
   display: flex;
 }
@@ -269,9 +276,16 @@ p span {
   text-decoration-color: #007aff  ;
 }
 
+.font {
+  text-decoration: none;
+  font-family: var(--my_font3);
+}
+
 .contact_button {
+  background: var(--black_color);
 display: flex;
 justify-content: center;
+padding: 1em;
 }
 
   button a {

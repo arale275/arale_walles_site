@@ -211,6 +211,10 @@ button.link {
   color: var(--black_color);
 }
 
+.change_bg {
+min-height: 90vh;
+}
+
 .cover {
   background: url(/images/copernico-cLmOptqvuFQ-unsplash.webp);
   background-size: cover;
@@ -233,13 +237,26 @@ button.link {
   background: hsl(0, 0%, 3%, 0.8);
   color: var(--brown_color);
   font-size: 2rem;
-  margin: 3em auto;
+  margin: 4em auto;
   max-height: max-content;
   max-width: max-content;
 }
 
+.withe {
+color: var(--withe_color);
+}
+
+.black {
+  color: var(--withe_color);
+  background: var(--brown_color);
+  padding: 0.125em;
+}
+
 .font {
   font-family: var(--my_font3);
+  color: var(--black_color);
+  background: var(--brown_color);
+  padding: 0.125em;
 }
 
 
@@ -247,66 +264,46 @@ button.link {
 /* section 2 */
 
 .build_sites_bg {
-  background: linear-gradient(
-    180deg,
-    hsla(0, 0%, 3%, 1) 50%,
-    hsla(0, 0%, 100%, 0.75) 50%
-  );
   color: var(--withe_color);
-
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
-
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
   text-align: center;
-
   min-height: 70vh;
 }
 
 .build_sites {
+  background: var(--black_color);
   grid-row-start: 1;
   grid-row-end: 2;
 }
 
-.build_sites > img {
-  grid-row-start: 2;
-  grid-row-end: 3;
+.img {
+  background-image: url(../images/hacquard-victor-_BPv0g2CndM-unsplash.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 /* section 3 */
 .diy_bg {
-  background: linear-gradient(
-    180deg,
-    hsla(48, 95%, 49%, 1) 50%,
-    hsla(0, 0%, 100%, 0.75) 50%
-  );
   color: var(--black_color);
-
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
-
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
   text-align: center;
-
   min-height: 75vh;
 }
 
 .diy {
+  background: var(--brown_color); 
   grid-row-start: 1;
   grid-row-end: 2;
 }
 
-.diy > img {
-  grid-row-start: 2;
-  grid-row-end: 3;
+.img2 {
+  background-image: url(../images/pietro-de-grandi-pidpjXuorPE-unsplash.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 .diy .sub_tytle {
@@ -315,7 +312,7 @@ button.link {
 
 .go_travel_site {
   min-height: 80vh;
-  background: hsl(0, 0%, 3%, 0.75);
+  background: var(--black_color);
   color: var(--withe_color);
   display: flex;
   justify-content: center;
