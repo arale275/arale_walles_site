@@ -207,17 +207,8 @@ button.link {
   color: var(--black_color);
 }
 
-
-.cover {
-  background: url(/images/build1.jpg);
-  background-size: cover;
-  background-position: center top;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  z-index: -1;
+.change_bg {
+  background: rgb(235, 235, 235);
 }
 
 h1 {
@@ -225,13 +216,12 @@ h1 {
   font-family: var(--my_font2);
   font-size: 2.75rem;
   padding: 0;
-  line-height: 2.5;
+  line-height: 2;
   color: var(--brown_color);
   text-shadow: -10px 10px 15px var(--black_color);
   letter-spacing: 10px;
   text-align: center;
-  /* height: 75vh; */
-  margin: 3.5em auto 0 auto;
+  margin: 3em auto 1em auto;
 }
 
 /* main settings */
@@ -240,7 +230,21 @@ article {
     max-width: 60ch;
     padding: 0.75em;
     margin: 0 auto;
-    text-align: center;
+    background: rgb(185, 185, 185);
+  }
+
+  article ul {
+list-style: decimal;
+margin: 0;
+font-family: var(--my_font1);
+  }
+
+  article li {
+    padding-bottom: 10px;
+  }
+
+  .btn-container {
+    padding: 1em;
   }
 
   button a {
