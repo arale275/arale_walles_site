@@ -205,21 +205,22 @@ button.link {
 }
 
 .cover {
-  background: /* linear-gradient(
-      to top,
-      rgba(114, 112, 112, 0.555),
-      rgba(75, 74, 74, 0.555),
-      rgba(51, 50, 50, 0.555)
-    ), */
-    url(https://aralePull.b-cdn.net/ricardo-gomez-angel-zaxoaZVazCs-unsplash.jpg);
+ /*  background: url();
   background-size: cover;
-  background-position: center top;
+  background-position: center top; */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 100vh;
+  height: 50vh;
   z-index: -1;
+}
+
+.change_bg {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 h1 {
@@ -232,13 +233,18 @@ h1 {
   text-shadow: -10px 10px 15px var(--black_color);
   letter-spacing: 10px;
   text-align: center;
-  height: 75vh;
+  /* height: 50vh; */
   margin: 2.5em auto 0 auto;
 }
 
 /* main settings */
 
-
+.note {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0;
+  padding: 0 15px;
+}
 
 
 
