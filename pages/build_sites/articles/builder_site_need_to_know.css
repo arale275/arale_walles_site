@@ -96,8 +96,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem;
-  background: hsl(0, 0%, 3%, 0.85);
+  padding: 0.75em;
 }
 
 .logo {
@@ -142,7 +141,7 @@ button.link {
     font-size: 1.5rem;
     font-family: var(--my_font2);
     border-radius: 15px;
-    margin: 1.5em auto;
+    margin: 0 auto;
     padding: 0.25em 0.75em;
     display: flex;
     justify-content: center;
@@ -208,6 +207,7 @@ button.link {
   color: var(--black_color);
 }
 
+
 .cover {
   background: url(/images/build1.jpg);
   background-size: cover;
@@ -231,7 +231,7 @@ h1 {
   letter-spacing: 10px;
   text-align: center;
   /* height: 75vh; */
-  margin: 2.5em auto 0 auto;
+  margin: 3.5em auto 0 auto;
 }
 
 /* main settings */
@@ -339,6 +339,10 @@ footer p {
 @media (min-width: 950px) {
   h1 {
     font-size: 3.75rem;
+  }
+
+  button.link {
+    font-size: 2.25rem;
   }
 
   .dropdown-menu {
