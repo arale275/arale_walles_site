@@ -24,6 +24,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "aperture";
+  src: url(/fonts/aperture2.0-webfont.woff);
+  font-display: swap;
+}
+
 /* my costum properties */
 
 :root {
@@ -36,6 +42,7 @@
   --my_font1: "trashim", cursive;
   --my_font2: "Shmulik", cursive;
   --my_font3: "stencilla", cursive;
+  --my_font4: "aperture", cursive;
 }
 
 /* general */
@@ -271,14 +278,14 @@ h1 {
   border-radius: 15px;
 }
 
-p span {
-  text-decoration: underline;
-  text-decoration-color: #007aff  ;
-}
 
 .font {
   text-decoration: none;
   font-family: var(--my_font3);
+}
+
+.custom {
+  font-family: var(--my_font4);
 }
 
 .contact_button {
