@@ -39,10 +39,10 @@
   --black_color: hsl(0, 0%, 3%);
   --brown_color: #f4c406;
 
-  --my_font1: "trashim", cursive;
-  --my_font2: "Shmulik", cursive;
-  --my_font3: "archicoco", cursive;
-  --my_font4: "aperture", cursive;
+  --my_font1: "trashim", sans-serif;
+  --my_font2: "Shmulik", sans-serif;
+  --my_font3: "archicoco", sans-serif;
+  --my_font4: "aperture", sans-serif;
 }
 
 /* general */
