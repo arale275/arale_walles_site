@@ -282,17 +282,29 @@ h1 {
 .font {
   text-decoration: none;
   font-family: var(--my_font3);
+  color: var(--black_color);
 }
 
 .custom {
   font-family: var(--my_font4);
+  color: var(--black_color);
 }
 
 .contact_button {
   background: var(--black_color);
+padding: 1em;
+min-width: 200px;
+max-width: 15%;
+margin: 1em auto;
 display: flex;
 justify-content: center;
-padding: 1em;
+align-items: center;
+border-radius: 30px;
+}
+
+button.link {
+ 
+margin: 0 auto;
 }
 
   button a {
@@ -309,6 +321,27 @@ padding: 1em;
     color: var(--withe_color);
   }
 
+  .container_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--withe_color);
+    max-width: 65ch;
+    margin: 3% auto ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.25) 0px -12px 30px, rgba(0, 0, 0, 0.25) 0px 4px 6px, rgba(0, 0, 0, 0.25) 0px 12px 13px, rgba(0, 0, 0, 0.25) 0px -3px 5px;
+  border-radius: 30px;
+  border: 4px solid var(--brown_color);
+  }
+
+.card {
+  padding: 1em;
+  text-align: center;
+}
+
+p > span {
+  color: red;
+}
 
 /* footer settings */
 
