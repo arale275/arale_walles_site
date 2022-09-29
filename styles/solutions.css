@@ -294,7 +294,7 @@ h1 {
   background: var(--black_color);
 padding: 1em;
 min-width: 200px;
-max-width: 15%;
+max-width: 13%;
 margin: 1em auto;
 display: flex;
 justify-content: center;
